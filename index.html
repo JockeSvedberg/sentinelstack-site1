@@ -2,194 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SentinelStack – AI Act Compliance</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelStack Pricing</title>
   <style>
     body {
+      background-color: #000;
+      color: #aff;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0a0a0a;
-      color: #e0f0ff;
-      line-height: 1.6;
+      padding: 0;
     }
-    header, footer {
+    .pricing-section {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
     }
-    header img.logo {
-      max-height: 60px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #00f0ff;
+    .logo {
+      height: 48px;
       margin-bottom: 0.5rem;
     }
-    .hero p {
-      font-size: 1.3rem;
-      color: #c0d0e0;
-      margin-top: 0;
+    .slogan {
+      font-size: 1.8rem;
+      margin-bottom: 2.5rem;
     }
-    .cta-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.9rem 2.2rem;
+    .toggle {
+      margin-bottom: 2rem;
+    }
+    .toggle input {
+      display: none;
+    }
+    .toggle label {
+      background-color: #111;
+      color: #aff;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid #00f0ff;
+      cursor: pointer;
+      border-radius: 8px;
+      margin: 0 5px;
+    }
+    .toggle input:checked + label {
       background-color: #00f0ff;
       color: #000;
-      font-weight: 600;
-      border: none;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background 0.3s;
     }
-    .cta-button:hover {
-      background-color: #00c0cc;
-    }
-    .section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-    .section h2 {
-      font-size: 2rem;
-      border-left: 4px solid #00f0ff;
-      padding-left: 1rem;
-      margin-bottom: 1rem;
-    }
-    .pricing {
+    .plans {
       display: flex;
-      flex-direction: row;
-      gap: 2rem;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
     }
-    .pricing .tier {
-      background: #111;
+    .plan {
       border: 1px solid #00f0ff;
-      padding: 1.5rem;
       border-radius: 12px;
-      text-align: center;
-      width: 100%;
-      max-width: 280px;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+      background-color: #050505;
+      width: 270px;
+      padding: 2rem;
+      position: relative;
     }
-    .pricing .tier h3 {
-      font-size: 1.3rem;
-      color: #00f0ff;
+    .plan h2 {
+      font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
-    .pricing .tier p {
+    .plan p {
       font-size: 0.95rem;
-      margin-bottom: 1rem;
-      color: #ccc;
+      margin-bottom: 1.2rem;
     }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      max-width: 500px;
-      margin: 2rem auto;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      border-radius: 5px;
-      border: none;
-      background: #222;
-      color: #fff;
-      font-size: 1rem;
-    }
-    button {
-      background: #00f0ff;
+    .plan a {
+      display: inline-block;
+      background-color: #00f0ff;
       color: #000;
-      padding: 0.75rem;
       font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-      border: none;
-      font-size: 1rem;
-    }
-    button:hover {
-      background: #00c0cc;
-    }
-    footer p, footer a {
-      font-size: 0.85rem;
-      color: #777;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
       text-decoration: none;
-      margin: 0 0.25rem;
+    }
+    .tooltip {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 1.2rem;
+      color: #00f0ff;
+      cursor: help;
+    }
+    @media(max-width: 768px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <img src="https://via.placeholder.com/200x60?text=SentinelStack+Logo" alt="SentinelStack logo" class="logo">
-    <h1>Predict. Prevent. Protect.</h1>
-    <p>AI Act Compliance – Automated for Small EU Businesses</p>
-    <a href="#pricing" class="cta-button">Start Your Free Trial</a>
-  </header>
 
-  <section class="section">
-    <h2>The Problem</h2>
-    <p>The AI Act is here. Most EU companies are unprepared. Non-compliance leads to fines up to €30M. SentinelStack ensures you're compliant – with zero guesswork.</p>
-  </section>
+<section class="pricing-section">
+  <!-- Logo & Slogan -->
+  <div>
+    <img src="/sentinelstack-logo.png" alt="SentinelStack logo" class="logo" onerror="this.style.display='none';">
+    <h1 class="slogan">Predict. Prevent. Protect.</h1>
+  </div>
 
-  <section class="section">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Edge AI agents that detect & log AI risk</li>
-      <li>PDF reports that meet Article 10 requirements</li>
-      <li>Local CLI tools for exporting compliance proof</li>
-      <li>No cloud. No legal guesswork.</li>
-    </ul>
-  </section>
+  <!-- Toggle monthly/yearly -->
+  <div class="toggle">
+    <input type="radio" id="monthly" name="billing" checked onchange="updatePrices()">
+    <label for="monthly">Monthly</label>
+    <input type="radio" id="yearly" name="billing" onchange="updatePrices()">
+    <label for="yearly">Yearly (save 20%)</label>
+  </div>
 
-  <section id="pricing" class="section">
-    <h2>Choose Your Plan</h2>
-    <div class="pricing">
-      <div class="tier">
-        <h3>Starter – EUR 99/mo</h3>
-        <p>Basic AI Act compliance tools</p>
-        <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00" class="cta-button">Get Started</a>
-      </div>
-      <div class="tier">
-        <h3>Growth – EUR 249/mo</h3>
-        <p>Full access + PDF + Telegram alerts</p>
-        <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01" class="cta-button">Start Trial</a>
-      </div>
-      <div class="tier">
-        <h3>Premium – EUR 499/mo</h3>
-        <p>Dedicated agent + support + API</p>
-        <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02" class="cta-button">Talk to Sales</a>
-      </div>
+  <!-- Pricing Plans -->
+  <div class="plans">
+    
+    <!-- Starter Plan -->
+    <div class="plan">
+      <div class="tooltip" title="Perfect for solopreneurs and startups.">ⓘ</div>
+      <h2>Starter – <span class="price" data-month="99" data-year="79">€99</span>/mo</h2>
+      <p>Basic AI Act compliance tools</p>
+      <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00">Buy Starter</a>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>Contact Us</h2>
-    <form action="mailto:ceo@sentinelstack.tech?subject=New Inquiry from SentinelStack Site&cc=info@sentinelstack.tech" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <!-- Growth Plan -->
+    <div class="plan">
+      <div class="tooltip" title="Most popular. Includes all reports and alerts.">ⓘ</div>
+      <h2>Growth – <span class="price" data-month="249" data-year="199">€249</span>/mo</h2>
+      <p>Full access + PDF reports + Email alerts</p>
+      <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01">Buy Growth</a>
+    </div>
 
-  <footer>
-    <p>
-      &copy; 2025 SentinelStack AB |
-      <a href="mailto:ceo@sentinelstack.tech">ceo@sentinelstack.tech</a> |
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Terms of Use</a>
-    </p>
-  </footer>
+    <!-- Premium Plan -->
+    <div class="plan">
+      <div class="tooltip" title="Best for growing teams and consultants.">ⓘ</div>
+      <h2>Premium – <span class="price" data-month="499" data-year="399">€499</span>/mo</h2>
+      <p>Dedicated agent + 24/7 support + API</p>
+      <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02">Buy Premium</a>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="plan">
+      <div class="tooltip" title="For large orgs. Includes onboarding + compliance audit.">ⓘ</div>
+      <h2>Enterprise – Custom</h2>
+      <p>Full suite + SLA + audit + private hosting</p>
+      <a href="mailto:ceo@sentinelstack.tech">Contact Sales</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function updatePrices() {
+    const yearly = document.getElementById("yearly").checked;
+    document.querySelectorAll(".price").forEach(span => {
+      const val = yearly ? span.dataset.year : span.dataset.month;
+      span.innerText = "€" + val;
+    });
+  }
+</script>
+
 </body>
 </html>
