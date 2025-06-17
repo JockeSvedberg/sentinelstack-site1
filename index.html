@@ -3,462 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SentinelStack – Predict. Prevent. Protect. | AI Act Compliance</title>
-  <meta name="description" content="SentinelStack is an all-in-one EU AI Act compliance toolkit for AI startups, legal teams, and CTOs. Predict risks, prevent issues, and protect your business with automated risk classification, audit templates, and continuous compliance monitoring." />
-  <meta name="keywords" content="EU AI Act, AI compliance, AI regulation, risk assessment, AI governance" />
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #ccc;
-      font-family: sans-serif;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      color: #00ffff;
-      margin-bottom: 0.5em;
-    }
-    h1 { font-size: 2.5em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.4em; }
-    p {
-      margin-bottom: 1em;
-    }
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* Header and Navigation */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: #000;
-    }
-    .logo {
-      font-size: 1.3em;
-      font-weight: bold;
-      color: #00ffff;
-    }
-    nav .nav-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 2rem;
-    }
-    nav .nav-menu li {
-      margin: 0;
-    }
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: #00ffff;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-    /* Sections */
-    section {
-      padding: 4rem 2rem;
-    }
-    #hero {
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-    #hero .subtitle {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-bottom: 2em;
-    }
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 0.6em 1.2em;
-      border: 2px solid #00ffff;
-      color: #00ffff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 1em;
-      background: transparent;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #00ffff;
-      color: #000;
-    }
-    .cta-btn {
-      font-size: 1.1em;
-      padding: 0.8em 1.5em;
-    }
-    /* Features list */
-    .features-list {
-      list-style: none;
-      margin: 1em 0 2em;
-      padding: 0;
-    }
-    .features-list li {
-      margin-bottom: 0.5em;
-    }
-    .features-list li::before {
-      content: "✓";
-      color: #00ffff;
-      margin-right: 0.5em;
-    }
-    /* Audience (target users) */
-    .audience-list {
-      list-style: none;
-      margin: 1em 0 0;
-      padding: 0;
-    }
-    .audience-list li {
-      margin-bottom: 0.5em;
-    }
-    .audience-list strong {
-      color: #00ffff;
-    }
-    /* Pricing */
-    #pricing .pricing-plans {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-around;
-    }
-    .plan {
-      background: #111;
-      padding: 2rem;
-      border: 1px solid #333;
-      border-radius: 5px;
-      flex: 1 1 30%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .plan h3 {
-      margin-top: 0;
-    }
-    .price {
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 0.5em 0;
-      color: #ccc;
-    }
-    .price .per {
-      font-size: 0.5em;
-      color: #888;
-      font-weight: normal;
-    }
-    .plan ul {
-      list-style: none;
-      padding: 0;
-      margin: 1em 0 2em;
-      text-align: left;
-    }
-    .plan ul li {
-      margin-bottom: 0.5em;
-      padding-left: 1.2em;
-      position: relative;
-    }
-    .plan ul li::before {
-      content: "•";
-      color: #00ffff;
-      position: absolute;
-      left: 0;
-    }
-    .plan .btn {
-      margin-top: auto;
-    }
-    /* Testimonials */
-    #testimonials .testimonials-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-around;
-    }
-    .testimonial {
-      flex: 1 1 30%;
-      border-left: 4px solid #00ffff;
-      padding-left: 1em;
-      margin: 0;
-    }
-    .testimonial p {
-      margin: 0 0 0.5em;
-    }
-    .testimonial footer {
-      font-size: 0.9em;
-      color: #888;
-    }
-    .testimonial cite {
-      font-style: normal;
-      color: #888;
-    }
-    /* Download form */
-    #download .download-container {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    #download form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5em;
-      justify-content: center;
-      margin-top: 1em;
-    }
-    .email-input {
-      flex: 1 1 250px;
-      padding: 0.6em;
-      border: 1px solid #555;
-      border-radius: 4px;
-      background: #222;
-      color: #fff;
-      font-family: inherit;
-    }
-    .email-input:focus {
-      outline: none;
-      border-color: #00ffff;
-    }
-    .email-input::placeholder {
-      color: #888;
-    }
-    .privacy-note {
-      font-size: 0.8em;
-      color: #888;
-      margin-top: 0.5em;
-    }
-    /* Contact */
-    #contact {
-      text-align: center;
-    }
-    #contact a {
-      text-decoration: underline;
-    }
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 1em 2em;
-      background: #000;
-      color: #555;
-      font-size: 0.9em;
-    }
-    .footer a {
-      color: #555;
-      text-decoration: none;
-      margin: 0 0.5em;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    /* Cookie banner */
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.9);
-      color: #ccc;
-      padding: 10px 20px;
-      font-size: 0.9em;
-      text-align: center;
-      z-index: 1000;
-    }
-    .cookie-banner .btn {
-      margin-left: 1em;
-      padding: 0.3em 0.8em;
-      font-size: 0.9em;
-    }
-    .cookie-banner a {
-      color: #00ffff;
-      text-decoration: underline;
-      margin-left: 1em;
-      font-size: 0.9em;
-    }
-    /* Responsive: Mobile menu */
-    @media (max-width: 768px) {
-      nav .nav-menu {
-        display: none;
-        flex-direction: column;
+  <title>SentinelStack – AI Act Compliance SaaS</title>
+  <!-- Google Fonts for Sora (and Inter as fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;600;700&display=swap">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Configuration for custom theme (neon color, fonts, etc.) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            neon: '#00f0ff',  /* Neon blue accent color */
+          },
+          fontFamily: {
+            sans: ['Sora', 'Inter', 'ui-sans-serif', 'system-ui'],
+          },
+          boxShadow: {
+            neon: '0 0 10px rgba(0, 240, 255, 0.5)',  /* soft neon glow */
+          }
+        }
       }
-      nav .nav-menu.open {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 0.5em;
-      }
-      nav .nav-menu.open a {
-        display: block;
-        width: 100%;
-        padding: 0.5em 0;
-      }
-      .nav-toggle {
-        display: inline-block;
-      }
-      .header {
-        align-items: center;
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      /* Utilities for scroll-reveal animations */
+      .scroll-hidden { @apply opacity-0 translate-y-8; }
+      .scroll-show   { @apply opacity-100 translate-y-0; }
+      /* Smooth transition for all properties (used on animating elements) */
+      .transition-base { @apply transition-all duration-700 ease-out; }
+      /* Glassmorphism card utility (semi-transparent dark background + backdrop blur) */
+      .glass-card { 
+        @apply bg-white/5 backdrop-blur-md border border-white/10; 
       }
     }
   </style>
 </head>
-<body>
-  <header class="header">
-    <div class="logo">SentinelStack</div>
-    <nav>
-      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
-      <ul id="nav-menu" class="nav-menu">
-        <li><a href="#features">Product</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#download">Checklist</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<body class="bg-black text-gray-200 font-sans leading-relaxed">
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 w-full z-20 backdrop-blur bg-black/80 border-b border-gray-800">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Brand / Logo -->
+      <div class="text-neon text-xl font-bold">SentinelStack</div>
+      <!-- Desktop Menu Links -->
+      <div class="hidden md:flex space-x-8 text-sm">
+        <a href="#pricing" class="hover:text-neon transition-colors">Pricing</a>
+        <a href="#testimonials" class="hover:text-neon transition-colors">Testimonials</a>
+        <a href="#contact" class="hover:text-neon transition-colors">Contact</a>
+      </div>
+      <!-- CTA in nav -->
+      <a href="#pilot" class="hidden md:inline-block bg-transparent border border-neon text-neon text-sm font-medium px-4 py-2 rounded hover:bg-neon hover:text-black transition-colors">Start Free Pilot</a>
+      <!-- Mobile menu button -->
+      <button id="menuToggle" class="md:hidden text-gray-300 focus:outline-none focus:ring-2 focus:ring-neon">
+        <!-- Icon: hamburger menu (3 bars) -->
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </nav>
+    <!-- Mobile dropdown menu -->
+    <div id="mobileMenu" class="md:hidden bg-black/90 backdrop-blur-lg border-t border-gray-800 hidden">
+      <nav class="px-6 pt-2 pb-4 flex flex-col space-y-2 text-sm">
+        <a href="#pricing" class="block px-3 py-2 hover:bg-gray-800 rounded">Pricing</a>
+        <a href="#testimonials" class="block px-3 py-2 hover:bg-gray-800 rounded">Testimonials</a>
+        <a href="#contact" class="block px-3 py-2 hover:bg-gray-800 rounded">Contact</a>
+        <a href="#pilot" class="block mt-2 text-center bg-neon text-black font-medium px-3 py-2 rounded hover:brightness-110 transition">Start Free Pilot</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero">
-    <h1>Predict. Prevent. Protect.</h1>
-    <p class="subtitle">Navigate the EU AI Act with ease – predict compliance risks, prevent regulatory issues, and protect your business from hefty fines.</p>
-    <a href="#download" class="btn cta-btn">Download AI Act Checklist</a>
-  </section>
-
-  <section id="features">
-    <h2>All-in-One AI Act Compliance Toolkit</h2>
-    <p>SentinelStack provides everything you need to comply with the EU AI Act in one place. Key features include:</p>
-    <ul class="features-list">
-      <li><strong>Compliance Management Platform:</strong> A centralized dashboard to manage all your AI systems’ compliance status, generate required reports, and track progress.</li>
-      <li><strong>Automated Risk Classification:</strong> Intelligently determine each AI system’s risk category (e.g. high-risk, limited-risk) through guided questionnaires and data analysis.</li>
-      <li><strong>Audit Kit & Documentation:</strong> Ready-to-use templates and checklists for technical documentation, data governance, and bias monitoring to meet AI Act requirements.</li>
-      <li><strong>Continuous Updates:</strong> Regular updates to reflect new regulatory changes, so you always stay ahead of compliance obligations.</li>
-    </ul>
-  </section>
-
-  <section id="audience">
-    <h2>Who Is It For?</h2>
-    <ul class="audience-list">
-      <li><strong>AI Startups:</strong> Embed compliance from day one and accelerate your go-to-market by avoiding regulatory delays.</li>
-      <li><strong>Legal & Compliance Teams:</strong> Simplify oversight with automated tools that reduce manual effort and ensure nothing falls through the cracks.</li>
-      <li><strong>CTOs & CIOs:</strong> Integrate compliance checks into your development pipeline to deploy AI solutions with confidence and transparency.</li>
-      <li><strong>Enterprise Leaders:</strong> Protect your organization’s reputation by ensuring all AI deployments meet the latest EU standards and ethical guidelines.</li>
-    </ul>
-  </section>
-
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <div class="pricing-plans">
-      <div class="plan">
-        <h3>Startup</h3>
-        <p class="price">€49<span class="per">/month</span></p>
-        <ul>
-          <li>For 1 AI system/project</li>
-          <li>Basic risk assessment & reports</li>
-          <li>Email support</li>
-          <li>Free 14-day trial</li>
-        </ul>
-        <a href="YOUR_STRIPE_LINK_STARTUP" class="btn">Buy Now</a>
+  <!-- Hero Section -->
+  <section id="hero" class="pt-24 pb-16 px-6 text-center relative overflow-hidden">
+    <!-- Neon glow background effect (optional decorative circle) -->
+    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+      <!-- Example: a faint neon cyan circle behind the text -->
+      <div class="w-96 h-96 bg-neon opacity-10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto scroll-hidden transition-base" data-animate="scroll">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">AI Compliance Made Simple</h1>
+      <p class="text-xl text-gray-300 mb-8">Stay ahead of regulations with an all-in-one AI Act compliance platform.</p>
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="#checklist" class="bg-neon text-black font-semibold text-lg px-6 py-3 rounded-md shadow-neon hover:shadow-none hover:brightness-110 transition">Download AI Act Checklist</a>
+        <a href="#pilot" class="bg-transparent border-2 border-neon text-neon font-medium text-lg px-6 py-3 rounded-md hover:bg-neon hover:text-black transition">Start Free Pilot</a>
       </div>
-      <div class="plan">
-        <h3>Growth</h3>
-        <p class="price">€199<span class="per">/month</span></p>
-        <ul>
-          <li>Up to 5 AI systems</li>
-          <li>Advanced monitoring & alerts</li>
-          <li>Team collaboration features</li>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section id="intro" class="px-6 py-16 max-w-4xl mx-auto scroll-hidden transition-base" data-animate="scroll">
+    <h2 class="text-2xl md:text-3xl text-white font-semibold mb-4 text-center">What is SentinelStack?</h2>
+    <p class="text-gray-300 text-base md:text-lg mb-4">
+      <strong>SentinelStack</strong> is a compliance platform that helps businesses easily navigate the upcoming <em>EU AI Act</em> and other AI regulations. It automatically assesses your AI systems against regulatory checkpoints, generates compliance reports, and provides guidance to fix any issues.
+    </p>
+    <p class="text-gray-300 text-base md:text-lg">
+      With SentinelStack, teams can confidently innovate in AI while staying within legal and ethical boundaries. Our tool is continuously updated with the latest regulatory requirements, ensuring you’re always a step ahead in compliance.
+    </p>
+  </section>
+
+  <!-- Target Audiences Section -->
+  <section id="audiences" class="px-6 py-16 bg-gray-900/50 scroll-hidden transition-base" data-animate="scroll">
+    <h2 class="text-2xl md:text-3xl text-white font-semibold text-center mb-8">Who is it for?</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <!-- Audience 1 -->
+      <div class="p-6 rounded-xl glass-card shadow-md scroll-hidden transition-base" data-animate="scroll">
+        <h3 class="text-xl text-neon font-semibold mb-2">Startups & Innovators</h3>
+        <p class="text-sm text-gray-200">
+          Launch AI products with confidence. SentinelStack ensures you meet compliance requirements from day one, so you can focus on growth.
+        </p>
+      </div>
+      <!-- Audience 2 -->
+      <div class="p-6 rounded-xl glass-card shadow-md scroll-hidden transition-base" data-animate="scroll">
+        <h3 class="text-xl text-neon font-semibold mb-2">Legal & Compliance Teams</h3>
+        <p class="text-sm text-gray-200">
+          Simplify AI risk assessments and documentation. SentinelStack provides an automated checklist and audit trail aligned with the EU AI Act.
+        </p>
+      </div>
+      <!-- Audience 3 -->
+      <div class="p-6 rounded-xl glass-card shadow-md scroll-hidden transition-base" data-animate="scroll">
+        <h3 class="text-xl text-neon font-semibold mb-2">CTOs & Product Managers</h3>
+        <p class="text-sm text-gray-200">
+          Integrate compliance into your workflow. Get alerts and guidance during development to avoid costly compliance issues after deployment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="px-6 py-16 scroll-hidden transition-base" data-animate="scroll">
+    <h2 class="text-2xl md:text-3xl text-white font-semibold text-center mb-12">Pricing Plans</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="relative p-8 rounded-xl glass-card border border-cyan-500/30 shadow-md flex flex-col">
+        <h3 class="text-xl text-white font-semibold mb-1">Starter</h3>
+        <p class="text-5xl text-neon font-bold mb-4">€49<span class="text-base font-normal text-gray-400">/month</span></p>
+        <ul class="text-sm text-gray-300 space-y-2 mb-6">
+          <li>Basic AI Act checklist</li>
+          <li>1 Project included</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#" class="mt-auto block text-center bg-neon text-black font-medium px-4 py-2 rounded hover:brightness-110 transition">Buy Starter</a>
+      </div>
+      <!-- Growth Plan (Highlighted) -->
+      <div class="relative p-8 rounded-xl glass-card border border-neon shadow-md flex flex-col">
+        <!-- Popular badge -->
+        <span class="absolute top-4 right-4 bg-neon text-black text-xs font-bold px-2 py-1 rounded">Most Popular</span>
+        <h3 class="text-xl text-white font-semibold mb-1">Growth</h3>
+        <p class="text-5xl text-neon font-bold mb-4">€199<span class="text-base font-normal text-gray-400">/month</span></p>
+        <ul class="text-sm text-gray-300 space-y-2 mb-6">
+          <li>Full AI Act compliance suite</li>
+          <li>Up to 5 Projects</li>
           <li>Priority support</li>
         </ul>
-        <a href="YOUR_STRIPE_LINK_GROWTH" class="btn">Buy Now</a>
+        <a href="#" class="mt-auto block text-center bg-neon text-black font-medium px-4 py-2 rounded hover:brightness-110 transition">Buy Growth</a>
       </div>
-      <div class="plan">
-        <h3>Enterprise</h3>
-        <p class="price">€499<span class="per">/month</span></p>
-        <ul>
-          <li>Unlimited AI systems</li>
-          <li>Dedicated compliance advisor</li>
-          <li>Custom integration & onboarding</li>
-          <li>Premium support</li>
+      <!-- Premium Plan -->
+      <div class="relative p-8 rounded-xl glass-card border border-cyan-500/30 shadow-md flex flex-col">
+        <h3 class="text-xl text-white font-semibold mb-1">Premium</h3>
+        <p class="text-5xl text-neon font-bold mb-4">€499<span class="text-base font-normal text-gray-400">/month</span></p>
+        <ul class="text-sm text-gray-300 space-y-2 mb-6">
+          <li>Enterprise compliance features</li>
+          <li>Unlimited Projects</li>
+          <li>Dedicated account manager</li>
         </ul>
-        <a href="YOUR_STRIPE_LINK_ENTERPRISE" class="btn">Buy Now</a>
+        <a href="#" class="mt-auto block text-center bg-neon text-black font-medium px-4 py-2 rounded hover:brightness-110 transition">Buy Premium</a>
       </div>
     </div>
   </section>
 
-  <section id="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonials-container">
-      <blockquote class="testimonial">
-        <p>“As a startup, we couldn’t afford a legal team. SentinelStack gave us a clear roadmap to compliance and peace of mind to launch our AI product in the EU.”</p>
-        <footer><cite>Jane Doe, CEO of InnovAI</cite></footer>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>“SentinelStack made EU AI Act compliance straightforward. The risk grading and documentation templates saved us weeks of work.”</p>
-        <footer><cite>Mark T., Compliance Officer at FinData Corp.</cite></footer>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>“Our tech team integrated SentinelStack in a day. Now compliance checks run alongside development, so we can focus on innovation.”</p>
-        <footer><cite>Sarah L., CTO at RoboVision Inc.</cite></footer>
-      </blockquote>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="px-6 py-16 bg-gray-900/50 scroll-hidden transition-base" data-animate="scroll">
+    <h2 class="text-2xl md:text-3xl text-white font-semibold text-center mb-8">What Our Users Say</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="p-6 bg-gray-800/50 rounded-lg border border-gray-700 scroll-hidden transition-base" data-animate="scroll">
+        <p class="text-gray-200 italic mb-4">"SentinelStack took the headache out of AI compliance for us. The checklist was a lifesaver!"</p>
+        <p class="text-neon font-semibold">— Jane D., Startup CEO</p>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="p-6 bg-gray-800/50 rounded-lg border border-gray-700 scroll-hidden transition-base" data-animate="scroll">
+        <p class="text-gray-200 italic mb-4">"As a compliance officer, I love how SentinelStack translates the AI Act into actionable steps."</p>
+        <p class="text-neon font-semibold">— Mark R., Compliance Lead</p>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="p-6 bg-gray-800/50 rounded-lg border border-gray-700 scroll-hidden transition-base" data-animate="scroll">
+        <p class="text-gray-200 italic mb-4">"Integrating SentinelStack early saved us from costly reworks. It's like having a co-pilot for regulations."</p>
+        <p class="text-neon font-semibold">— Lisa K., CTO</p>
+      </div>
     </div>
   </section>
 
-  <section id="download">
-    <h2>Free EU AI Act Compliance Checklist</h2>
-    <div class="download-container">
-      <p>Download our free checklist (PDF) to jumpstart your AI Act compliance. This handy guide covers:</p>
-      <ul class="features-list">
-        <li>How to classify your AI system’s risk level under the Act</li>
-        <li>Key steps to meet documentation and transparency requirements</li>
-        <li>Expert tips to avoid common compliance pitfalls</li>
-      </ul>
-      <form action="YOUR_ZAPIER_WEBHOOK_URL" method="post">
-        <input type="email" name="email" class="email-input" placeholder="Your email address" required />
-        <button type="submit" class="btn">Download Now</button>
+  <!-- Lead Capture Form Section (Checklist Download) -->
+  <section id="checklist" class="px-6 py-16 scroll-hidden transition-base" data-animate="scroll">
+    <div class="max-w-xl mx-auto bg-gray-800/40 backdrop-blur rounded-xl p-6 border border-gray-700 text-center">
+      <h2 class="text-xl md:text-2xl text-white font-semibold mb-4">Download the AI Act Compliance Checklist</h2>
+      <p class="text-gray-300 mb-6">Get a free step-by-step checklist to prepare your organization for the EU AI Act. Just enter your details below:</p>
+      <form id="checklistForm" action="#" method="POST" class="space-y-4">
+        <div>
+          <input type="text" name="name" required placeholder="Your Name" class="w-full bg-gray-900 text-gray-200 placeholder-gray-500 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-neon focus:border-neon" />
+        </div>
+        <div>
+          <input type="email" name="email" required placeholder="Your Email" class="w-full bg-gray-900 text-gray-200 placeholder-gray-500 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-neon focus:border-neon" />
+        </div>
+        <button type="submit" class="w-full bg-neon text-black font-medium py-3 rounded-md hover:brightness-110 transition">Download Now</button>
       </form>
-      <p class="privacy-note">We will email you the checklist. We respect your privacy – no spam!</p>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Questions or demo requests? Email us at <a href="mailto:ceo@sentinelstack.tech">ceo@sentinelstack.tech</a></p>
+  <!-- Contact Info Section -->
+  <section id="contact" class="px-6 py-16 bg-gray-900/50 scroll-hidden transition-base text-center" data-animate="scroll">
+    <h2 class="text-xl md:text-2xl text-white font-semibold mb-4">Get in Touch</h2>
+    <p class="text-gray-300 mb-2">Have questions or need help? Reach out to us anytime.</p>
+    <p class="text-gray-300">
+      📧 <a href="mailto:support@sentinelstack.com" class="hover:text-neon">support@sentinelstack.com</a>
+    </p>
+    <!-- Optionally, physical address or phone could be listed here -->
+    <!-- <p class="text-gray-400">📍 123 Tech Lane, Stockholm, Sweden</p> -->
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 SentinelStack. All rights reserved. 
-       <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-    </p>
+  <!-- Footer -->
+  <footer class="px-6 py-4 border-t border-gray-800 text-gray-500 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-2 md:mb-0">© 2025 SentinelStack. All rights reserved.</div>
+      <div>🍪 This site uses cookies. By using this site, you agree to our <a href="#" class="underline hover:text-neon">cookie policy</a>.</div>
+    </div>
   </footer>
 
-  <div id="cookie-banner" class="cookie-banner">
-    This website uses cookies to ensure you get the best experience on our website.
-    <button class="btn" onclick="acceptCookies()">Accept</button>
-    <a href="#">Learn more</a>
-  </div>
-
+  <!-- Scripts: Mobile menu toggle & Scroll animations -->
   <script>
-    function toggleMenu() {
-      var navMenu = document.getElementById('nav-menu');
-      if (navMenu.classList.contains('open')) {
-        navMenu.classList.remove('open');
-      } else {
-        navMenu.classList.add('open');
-      }
-    }
-    function acceptCookies() {
-      localStorage.setItem('cookieConsent', 'yes');
-      var banner = document.getElementById('cookie-banner');
-      if (banner) banner.style.display = 'none';
-    }
-    // Hide cookie banner if already accepted
-    if (localStorage.getItem('cookieConsent') === 'yes') {
-      var banner = document.getElementById('cookie-banner');
-      if (banner) banner.style.display = 'none';
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Scroll reveal animations using IntersectionObserver
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.remove('scroll-hidden');
+          entry.target.classList.add('scroll-show');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate="scroll"]').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Form submission handler for checklist form (demo purpose)
+    const form = document.getElementById('checklistForm');
+    if(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        this.innerHTML = "<p class='text-lg text-neon font-semibold'>Thank you! Check your email for the checklist.</p>";
+      });
     }
   </script>
 </body>
