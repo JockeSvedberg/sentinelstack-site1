@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SentinelStack – AI Act Compliance & Threat Protection</title>
-  <meta name="description" content="SentinelStack offers real-time AI compliance, automated PDF audits, and email threat alerts under the EU AI Act. All-in-one platform for AI security." />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentinelStack – AI Compliance & Security</title>
+  <meta name="description" content="SentinelStack provides real-time AI Act compliance, audit-grade PDF reporting, and threat alerts. Built for startups, legal teams, and enterprise." />
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #aff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
     }
     header, footer {
       text-align: center;
       padding: 2rem 1rem;
     }
-    header h1 {
+    h1 {
       font-size: 2.7rem;
       margin-bottom: 1rem;
     }
-    header p {
-      font-size: 1.15rem;
-      max-width: 820px;
+    p {
+      max-width: 800px;
       margin: auto;
-      color: #aad;
+      color: #ccd;
     }
     .cta-button {
-      display: inline-block;
       margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background: #00f0ff;
+      background-color: #00f0ff;
       color: #000;
-      font-weight: bold;
+      padding: 0.8rem 1.5rem;
       border-radius: 10px;
+      font-weight: bold;
       text-decoration: none;
+      display: inline-block;
       font-size: 1.1rem;
+    }
+    section {
+      padding: 3rem 1rem;
     }
     .features, .audience, .how-it-works, .inclusions {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      padding: 3rem 1rem;
-      background-color: #050505;
     }
     .feature-box, .audience-box, .how-box, .inclusion-box {
+      background-color: #050505;
       border: 1px solid #00f0ff;
       border-radius: 12px;
       padding: 2rem;
       width: 300px;
-      background-color: #000;
-      text-align: left;
+    }
+    .toggle {
+      text-align: center;
+      margin-bottom: 1rem;
     }
     .toggle input {
       display: none;
@@ -75,144 +78,100 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
-      padding: 3rem 1rem;
     }
     .plan {
+      background-color: #050505;
       border: 1px solid #00f0ff;
       border-radius: 12px;
-      background-color: #050505;
-      width: 270px;
       padding: 2rem;
-      position: relative;
-      text-align: center;
+      width: 270px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 350px;
     }
-    .plan h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
+    .plan h2 { margin: 0.5rem 0; }
     .plan ul {
       text-align: left;
-      font-size: 0.9rem;
       padding-left: 1.2rem;
       flex-grow: 1;
     }
-    .plan li {
-      margin-bottom: 0.5rem;
-    }
     .plan a {
-      display: inline-block;
       background-color: #00f0ff;
       color: #000;
-      font-weight: bold;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
+      text-align: center;
       margin-top: 1rem;
     }
-    .tooltip {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      font-size: 1.2rem;
-      color: #00f0ff;
-      cursor: help;
+    .trust-logos img {
+      height: 40px;
+      margin: 0 1rem;
+      filter: brightness(2);
+    }
+    .badge {
+      border: 1px solid #00f0ff;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      background-color: #050505;
+      margin: 0.5rem;
+      display: inline-block;
     }
     footer p {
       font-size: 0.85rem;
       color: #888;
     }
-    @media(max-width: 768px) {
-      .plans, .features, .audience, .how-it-works, .inclusions {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="/sentinelstack-logo.png" alt="SentinelStack logo" style="height: 48px;" onerror="this.style.display='none';">
     <h1>Predict. Prevent. Protect.</h1>
-    <p>
-      SentinelStack is your all-in-one platform for AI compliance, PDF audit generation, real-time threat detection and email alerts – purpose-built for EU AI Act and GDPR-driven organizations.
-    </p>
+    <p>SentinelStack is your all-in-one platform for AI compliance, audit-grade reporting and real-time security alerts. Built for EU AI Act and GDPR-era risk.</p>
     <a href="#plans" class="cta-button">Start Free Risk Assessment</a>
   </header>
 
   <section class="features">
-    <div class="feature-box">
-      <h3>🔍 AI Act Compliance</h3>
-      <p>Live policy scanning, risk categorization and classification under the EU AI Act.</p>
-    </div>
-    <div class="feature-box">
-      <h3>📩 Real-time Alerts</h3>
-      <p>Get email alerts for breaches, anomalies, high-risk interactions and unverified outputs.</p>
-    </div>
-    <div class="feature-box">
-      <h3>📊 PDF Compliance Reports</h3>
-      <p>Download-ready PDF reports that are signed, timestamped and auditable in court or for investors.</p>
-    </div>
+    <div class="feature-box"><h3>🔍 AI Act Compliance</h3><p>Live policy scanning, risk categorization and classification under the EU AI Act.</p></div>
+    <div class="feature-box"><h3>📩 Real-time Alerts</h3><p>Get email alerts for breaches, anomalies, high-risk interactions and unverified outputs.</p></div>
+    <div class="feature-box"><h3>📊 PDF Compliance Reports</h3><p>Download-ready PDF reports that are signed, timestamped and audit-proof.</p></div>
   </section>
 
   <section class="audience">
-    <div class="audience-box">
-      <h3>🧠 AI Startups</h3>
-      <p>Ensure your AI product is compliant before investors or regulators ask.</p>
-    </div>
-    <div class="audience-box">
-      <h3>🏥 Healthcare & Legal</h3>
-      <p>Deploy AI tools safely in sensitive sectors with full logging and incident recovery.</p>
-    </div>
-    <div class="audience-box">
-      <h3>💼 Consultancies</h3>
-      <p>Deliver client-grade compliance dashboards, alerts and risk scoring automatically.</p>
-    </div>
+    <div class="audience-box"><h3>🧠 AI Startups</h3><p>Ensure your AI product is compliant before investors or regulators ask.</p></div>
+    <div class="audience-box"><h3>🏥 Healthcare & Legal</h3><p>Deploy AI tools safely in sensitive sectors with full logging and incident recovery.</p></div>
+    <div class="audience-box"><h3>💼 Consultancies</h3><p>Deliver client-grade compliance dashboards, alerts and risk scoring automatically.</p></div>
   </section>
 
   <section class="how-it-works">
-    <div class="how-box">
-      <h3>1️⃣ Install Sentinel Agent</h3>
-      <p>Get our lightweight agent running on any AI-enabled system in under 5 minutes.</p>
-    </div>
-    <div class="how-box">
-      <h3>2️⃣ Capture & Classify</h3>
-      <p>Our backend AI scans inputs/outputs for risks, bias, legality and manipulation.</p>
-    </div>
-    <div class="how-box">
-      <h3>3️⃣ Get Reports & Alerts</h3>
-      <p>You'll get PDF summaries + email alerts every time something breaches policy.</p>
-    </div>
+    <div class="how-box"><h3>1️⃣ Install Sentinel Agent</h3><p>Run our lightweight agent on any AI-enabled system in under 5 minutes.</p></div>
+    <div class="how-box"><h3>2️⃣ Capture & Classify</h3><p>Our backend scans I/O for risks, bias, legality, and manipulation.</p></div>
+    <div class="how-box"><h3>3️⃣ Get Reports & Alerts</h3><p>You'll receive PDF reports and instant alerts on any policy breach.</p></div>
   </section>
 
   <section class="inclusions">
     <div class="inclusion-box">
-      <h3>What's included in every plan</h3>
+      <h3>Included in every plan</h3>
       <ul>
         <li>✔️ Secure AI-agent deployment</li>
         <li>✔️ PDF compliance engine</li>
-        <li>✔️ EU AI Act risk scanning</li>
-        <li>✔️ Real-time email alerts</li>
-        <li>✔️ GDPR-compatible data flow</li>
+        <li>✔️ EU AI Act scanning</li>
+        <li>✔️ Real-time alerts</li>
+        <li>✔️ GDPR-compliant data flow</li>
       </ul>
     </div>
   </section>
 
-  <section style="text-align: center;">
-    <div class="toggle">
-      <input type="radio" id="monthly" name="billing" checked onchange="updatePrices()">
-      <label for="monthly">Monthly</label>
-      <input type="radio" id="yearly" name="billing" onchange="updatePrices()">
-      <label for="yearly">Yearly (save 20%)</label>
-    </div>
+  <section class="toggle">
+    <input type="radio" id="monthly" name="billing" checked onchange="updatePrices()">
+    <label for="monthly">Monthly</label>
+    <input type="radio" id="yearly" name="billing" onchange="updatePrices()">
+    <label for="yearly">Yearly (save 20%)</label>
   </section>
 
   <section class="plans" id="plans">
     <div class="plan">
-      <div class="tooltip" title="Perfect for solopreneurs and startups.">ⓘ</div>
       <h2>Starter – <span class="price" data-month="99" data-year="79">€99</span>/mo</h2>
       <ul>
         <li>Basic AI Act tools</li>
@@ -222,18 +181,16 @@
       <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00">Buy Starter</a>
     </div>
     <div class="plan">
-      <div class="tooltip" title="Most popular. Includes all reports and alerts.">ⓘ</div>
       <h2>Growth – <span class="price" data-month="249" data-year="199">€249</span>/mo</h2>
       <ul>
         <li>Everything in Starter</li>
         <li>Unlimited alerts</li>
-        <li>PDF reports (daily)</li>
+        <li>Daily PDF reports</li>
         <li>3 team members</li>
       </ul>
       <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01">Buy Growth</a>
     </div>
     <div class="plan">
-      <div class="tooltip" title="Best for growing teams and consultants.">ⓘ</div>
       <h2>Premium – <span class="price" data-month="499" data-year="399">€499</span>/mo</h2>
       <ul>
         <li>Everything in Growth</li>
@@ -244,15 +201,38 @@
       <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02">Buy Premium</a>
     </div>
     <div class="plan">
-      <div class="tooltip" title="For large orgs. Includes onboarding + audit + SLA.">ⓘ</div>
       <h2>Enterprise – Custom</h2>
       <ul>
         <li>All Premium features</li>
-        <li>Private hosting option</li>
-        <li>SLA, audit & onboarding</li>
-        <li>Custom billing & reporting</li>
+        <li>Private hosting</li>
+        <li>SLA, onboarding & audit</li>
+        <li>Custom billing/reporting</li>
       </ul>
       <a href="mailto:ceo@sentinelstack.tech">Contact Sales</a>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+    <h2 style="color: #aff; font-size: 1.8rem; margin-bottom: 1.5rem;">Trusted by AI-driven teams</h2>
+    <div class="trust-logos">
+      <img src="/logo-medsecure.png" alt="MedSecure">
+      <img src="/logo-lexai.png" alt="LexAI">
+      <img src="/logo-consultiq.png" alt="ConsultIQ">
+    </div>
+  </section>
+
+  <section style="text-align: center; background-color: #020202;">
+    <h2 style="color: #aff; font-size: 1.8rem;">What our customers say</h2>
+    <p style="max-width: 800px; margin: auto; font-style: italic;">“SentinelStack helped us prove compliance during due diligence. Their audit PDFs literally saved the deal.”<br><strong>— CTO, MedSecure AI</strong></p>
+    <p style="max-width: 800px; margin: 2rem auto 0; font-style: italic;">“We plugged in Sentinel in 15 minutes and started receiving alerts within the hour. Zero friction, massive trust boost.”<br><strong>— Head of Legal, LexAI</strong></p>
+  </section>
+
+  <section style="text-align: center;">
+    <h2 style="color: #aff; font-size: 1.7rem;">Compliance-ready & enterprise-grade</h2>
+    <div>
+      <span class="badge">🛡️ GDPR Ready</span>
+      <span class="badge">✅ AI Act Compliant</span>
+      <span class="badge">🔒 Encrypted Logging</span>
     </div>
   </section>
 
