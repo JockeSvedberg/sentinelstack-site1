@@ -1,345 +1,218 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SentinelStack – AI Act-efterlevnad gjort enkelt</title>
-  <!-- Tailwind CSS via CDN -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            neonblue: '#00ffff',
-            electricgreen: '#39ff14'
-          },
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-            space: ['Space Grotesk', 'sans-serif'],
-            dm: ['DM Sans', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <title>SentinelStack – AI-säkerhet och efterlevnad</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts for Inter, Space Grotesk, DM Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    html { scroll-behavior: smooth; }
-    /* Custom animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
-    .animate-fadeInRight { animation: fadeInRight 0.8s ease-out forwards; }
-    .reveal { opacity: 0; transform: translateY(20px); }
-    /* FAQ toggle marker styling */
-    details summary { cursor: pointer; list-style: none; }
-    details[open] summary { color: #39ff14; }
-    /* Remove default marker (optional) */
-    details summary::-webkit-details-marker { display: none; }
-  </style>
 </head>
-<body class="bg-black text-white font-inter">
-  <!-- Navigation -->
-  <nav class="flex items-center justify-between px-6 py-4">
-    <!-- Logo / Brand -->
-    <a href="#" class="text-2xl font-bold bg-gradient-to-r from-electricgreen to-neonblue text-transparent bg-clip-text font-space">
-      SentinelStack
-    </a>
-    <!-- Desktop Links -->
-    <div class="hidden md:flex space-x-8 text-sm">
-      <a href="#" class="text-gray-300 hover:text-electricgreen transition-colors">Docs</a>
-      <a href="#" class="text-gray-300 hover:text-electricgreen transition-colors">Pricing</a>
-      <a href="#" class="text-gray-300 hover:text-electricgreen transition-colors">About</a>
-    </div>
-    <!-- Mobile menu button -->
-    <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none text-xl">
-      &#9776;
-    </button>
-  </nav>
-  <!-- Mobile menu (hidden by default) -->
-  <div id="mobile-menu" class="px-6 py-4 bg-gray-900 hidden">
-    <a href="#" class="block text-gray-300 py-2">Docs</a>
-    <a href="#" class="block text-gray-300 py-2">Pricing</a>
-    <a href="#" class="block text-gray-300 py-2">About</a>
-  </div>
+<body class="bg-gray-900 text-gray-100 antialiased">
 
-  <!-- Hero Section -->
-  <header class="relative overflow-hidden">
-    <!-- Decorative neon accent blobs -->
-    <div class="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-neonblue opacity-30 blur-3xl rounded-full"></div>
-    <div class="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-electricgreen opacity-20 blur-3xl rounded-full"></div>
-    <div class="container mx-auto px-6 pt-16 pb-24 text-center relative">
-      <h1 class="text-4xl md:text-6xl font-bold font-dm animate-fadeIn" style="animation-delay: 0.1s;">
-        Säkerställ AI Act-efterlevnad med SentinelStack
-      </h1>
-      <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.4s;">
-        Plattformen som hjälper dig att följa EU:s AI Act. Automatiserade riskanalyser, dokumentation och realtidsövervakning – allt i en SaaS-tjänst.
-      </p>
-      <div class="mt-8 flex justify-center flex-wrap gap-4 animate-fadeIn" style="animation-delay: 0.8s;">
-        <a href="#" class="bg-electricgreen text-black font-bold py-3 px-6 rounded-md hover:bg-neonblue hover:text-black transition">
-          Starta gratis provperiod
-        </a>
-        <a href="#contact" class="bg-gray-800 border border-electricgreen text-electricgreen font-bold py-3 px-6 rounded-md hover:bg-electricgreen hover:text-black transition">
-          Boka demo
-        </a>
-      </div>
+  <!-- Navigation -->
+  <header class="bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-white">SentinelStack</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#features" class="text-gray-300 hover:text-gray-100 transition">Funktioner</a>
+        <a href="#pricing" class="text-gray-300 hover:text-gray-100 transition">Priser</a>
+        <a href="#contact" class="text-gray-300 hover:text-gray-100 transition">Kontakt</a>
+      </nav>
+      <a href="#contact" class="hidden md:inline-block border border-cyan-500 text-cyan-500 font-medium px-4 py-2 rounded-md hover:bg-cyan-500 hover:text-gray-900 transition">Starta gratis pilot</a>
+      <button class="md:hidden text-gray-200 focus:outline-none">
+        <!-- Mobile menu button (visas endast på mobil) -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
   </header>
 
-  <!-- Partners / Logo Wall -->
-  <section class="container mx-auto px-6 py-8">
-    <p class="text-center text-gray-400 text-sm">I samarbete med</p>
-    <div class="mt-6 flex flex-wrap justify-center items-center gap-x-8 gap-y-6 opacity-50 hover:opacity-100 transition">
-      <!-- Partner logos (using external sources) -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/OpenAI_logo_2025.svg" alt="OpenAI" class="h-6 invert" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vercel_logo_2025.svg" alt="Vercel" class="h-6 invert" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo,_revised_2016.svg" alt="Stripe" class="h-6" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="EU Flag" class="h-6" />
-    </div>
-  </section>
-
-  <!-- Features / Why SentinelStack -->
-  <section class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold font-dm mb-8 text-center">Varför SentinelStack?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div class="reveal">
-        <h3 class="text-xl font-semibold mb-2 flex items-center font-dm">
-          <span class="mr-2 text-electricgreen text-2xl">✓</span> Automatiserad riskbedömning
-        </h3>
-        <p class="text-gray-300">
-          SentinelStack analyserar automatiskt dina AI-system och klassificerar deras risknivå enligt AI Act:s riktlinjer.
-        </p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-xl font-semibold mb-2 flex items-center font-dm">
-          <span class="mr-2 text-electricgreen text-2xl">✓</span> Dokumentation för regelefterlevnad
-        </h3>
-        <p class="text-gray-300">
-          Genererar all nödvändig dokumentation med ett klick, så att din organisation uppfyller AI Act-kraven utan krångel.
-        </p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-xl font-semibold mb-2 flex items-center font-dm">
-          <span class="mr-2 text-electricgreen text-2xl">✓</span> Kontinuerlig övervakning
-        </h3>
-        <p class="text-gray-300">
-          Övervakar dina AI-modeller i realtid och varnar vid eventuella avvikelser – du får tidiga signaler om något behöver åtgärdas.
-        </p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-xl font-semibold mb-2 flex items-center font-dm">
-          <span class="mr-2 text-electricgreen text-2xl">✓</span> Smidiga integrationer
-        </h3>
-        <p class="text-gray-300">
-          Integrera enkelt med verktyg som Slack, e-post m.fl. för att få rapporter och aviseringar direkt i ditt dagliga arbetsflöde.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comparison Table / Pricing Plans -->
-  <section class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold font-dm mb-8 text-center">Jämförelse av paket</h2>
-    <div class="overflow-x-auto">
-      <table class="min-w-full border-collapse text-left text-gray-300">
-        <thead>
-          <tr class="bg-gray-800 text-gray-200">
-            <th class="p-3">Funktion</th>
-            <th class="p-3">Gratis</th>
-            <th class="p-3">Pro</th>
-            <th class="p-3">Enterprise</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-b border-gray-700">
-            <td class="p-3">Riskklassificering</td>
-            <td class="p-3 text-center">✓</td>
-            <td class="p-3 text-center">✓</td>
-            <td class="p-3 text-center">✓</td>
-          </tr>
-          <tr class="border-b border-gray-700 bg-gray-900">
-            <td class="p-3">Dokumentationsgenerator</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✓</td>
-            <td class="p-3 text-center">✓</td>
-          </tr>
-          <tr class="border-b border-gray-700">
-            <td class="p-3">Realtidsövervakning</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✓</td>
-            <td class="p-3 text-center">✓</td>
-          </tr>
-          <tr class="border-b border-gray-700 bg-gray-900">
-            <td class="p-3">Integrationer (Slack, m.m.)</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✓</td>
-            <td class="p-3 text-center">✓</td>
-          </tr>
-          <tr class="border-b border-gray-700">
-            <td class="p-3">API-åtkomst</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✓</td>
-          </tr>
-          <tr>
-            <td class="p-3">Prioriterad support</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✕</td>
-            <td class="p-3 text-center">✓</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="text-center mt-6">
-      <a href="#" class="bg-electricgreen text-black font-bold py-3 px-6 rounded-md hover:bg-neonblue hover:text-black transition">
-        Prova gratis idag
+  <!-- Hero Section -->
+  <section class="bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text mb-4">
+        Predict. Prevent. Protect.
+      </h1>
+      <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-4">
+        SentinelStack är en SaaS-plattform som hjälper er att uppfylla EU:s AI Act, genomföra AI-granskningar och skydda era AI-system i realtid.
+      </p>
+      <p class="text-sm text-gray-400 mb-8">
+        Byggd för startups, konsultbolag, medtech-, legaltech- och fintech-företag samt offentlig sektor.
+      </p>
+      <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-md hover:brightness-110 shadow-lg hover:shadow-xl transition duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50">
+        Starta gratis pilot
       </a>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="container mx-auto px-6 py-16 bg-gray-900 rounded-md">
-    <h2 class="text-3xl font-bold font-dm mb-12 text-center">Vad säger våra kunder?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg reveal">
-        <p class="text-gray-300 italic">&ldquo;SentinelStack har förenklat vår AI Act-efterlevnad avsevärt. Vi känner oss mycket tryggare inför de kommande regleringarna.&rdquo;</p>
-        <div class="mt-4 flex items-center">
-          <div class="bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center">
-            <span class="text-neonblue font-bold">A</span>
-          </div>
-          <div class="ml-3">
-            <p class="text-white font-bold">Anna Karlsson</p>
-            <p class="text-sm text-gray-400">CTO, DataCorp AB</p>
-          </div>
-        </div>
+  <!-- Trust Signals -->
+  <section class="py-8 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
+    <p class="text-center text-gray-400 text-sm uppercase mb-4">Betrodd av ledande organisationer</p>
+    <div class="max-w-4xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-gray-500 text-base">
+      <span class="uppercase">MediTech AB</span>
+      <span class="uppercase">FinBank</span>
+      <span class="uppercase">Legal Advisors</span>
+      <span class="uppercase">GovDept</span>
+      <span class="uppercase">AI Ventures</span>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Nyckelfunktioner</h2>
+      <p class="text-gray-300 text-lg">
+        Förutse risker, säkerställ efterlevnad och skydda era AI-modeller med SentinelStack.
+      </p>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Feature 1 -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center text-center p-6">
+        <!-- Icon: Compliance (Clipboard Document Check) -->
+        <svg class="w-12 h-12 text-cyan-500 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" />
+        </svg>
+        <h3 class="text-xl font-semibold mb-2">Efterlevnad av AI Act</h3>
+        <p class="text-gray-300">
+          Automatisk kontroll mot EU:s AI-förordning och checklistor för att säkerställa att er AI följer alla regelverk.
+        </p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg reveal">
-        <p class="text-gray-300 italic">&ldquo;Tack vare SentinelStack kan vi enkelt visa att våra AI-system uppfyller de strikta kraven. Det sparar oss både tid och huvudbry.&rdquo;</p>
-        <div class="mt-4 flex items-center">
-          <div class="bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center">
-            <span class="text-electricgreen font-bold">B</span>
-          </div>
-          <div class="ml-3">
-            <p class="text-white font-bold">Björn Eriksson</p>
-            <p class="text-sm text-gray-400">Ansvarig AI-compliance, SecureTech</p>
-          </div>
-        </div>
+      <!-- Feature 2 -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center text-center p-6">
+        <!-- Icon: Audits (Document Magnifying Glass) -->
+        <svg class="w-12 h-12 text-cyan-500 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+        </svg>
+        <h3 class="text-xl font-semibold mb-2">AI-granskningar &amp; rapporter</h3>
+        <p class="text-gray-300">
+          Detaljerade AI-audits med insikter och PDF-rapporter. Identifiera bias och risker innan de blir problem.
+        </p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg reveal md:col-span-2 lg:col-span-1">
-        <p class="text-gray-300 italic">&ldquo;Vi uppskattar hur proaktiv SentinelStack är. Den håller oss steget före – vi kan fokusera på utveckling istället för byråkrati.&rdquo;</p>
-        <div class="mt-4 flex items-center">
-          <div class="bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center">
-            <span class="text-neonblue font-bold">E</span>
-          </div>
-          <div class="ml-3">
-            <p class="text-white font-bold">Erik Lund</p>
-            <p class="text-sm text-gray-400">IT-chef, InnovateX</p>
-          </div>
-        </div>
+      <!-- Feature 3 -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center text-center p-6">
+        <!-- Icon: Protection (Shield Check) -->
+        <svg class="w-12 h-12 text-cyan-500 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        <h3 class="text-xl font-semibold mb-2">Skydd &amp; larm i realtid</h3>
+        <p class="text-gray-300">
+          Övervaka era AI-modeller dygnet runt. Få realtidslarm vid avvikelser och stoppa incidenter innan de sker.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold font-dm mb-8 text-center">FAQ – Vanliga frågor</h2>
-    <div class="max-w-2xl mx-auto text-gray-300">
-      <details class="mb-4 reveal">
-        <summary class="font-semibold">Vad är AI Act?</summary>
-        <p class="mt-2">
-          AI Act (Artificiell Intelligens Act) är ett kommande regelverk från EU som syftar till att säkerställa att AI-system utvecklas och används på ett säkert och ansvarsfullt sätt.
-        </p>
-      </details>
-      <details class="mb-4 reveal">
-        <summary class="font-semibold">Vem måste följa AI Act?</summary>
-        <p class="mt-2">
-          AI Act kommer att gälla för utvecklare, leverantörer och användare av AI-system inom EU. Det innebär att många företag som använder AI i sin verksamhet behöver uppfylla kraven.
-        </p>
-      </details>
-      <details class="mb-4 reveal">
-        <summary class="font-semibold">Hur hjälper SentinelStack med efterlevnad?</summary>
-        <p class="mt-2">
-          SentinelStack erbjuder verktyg som automatiskt bedömer risknivåer, genererar nödvändig dokumentation och övervakar era AI-system, så att ni kan uppfylla AI Act-kraven enklare.
-        </p>
-      </details>
-      <details class="mb-4 reveal">
-        <summary class="font-semibold">När träder AI Act i kraft?</summary>
-        <p class="mt-2">
-          De första delarna av AI Act förväntas börja gälla under 2025. SentinelStack håller er uppdaterade om viktiga datum och hjälper er vara redo i tid.
-        </p>
-      </details>
-      <details class="mb-4 reveal">
-        <summary class="font-semibold">Kan jag prova SentinelStack gratis?</summary>
-        <p class="mt-2">
-          Ja! Vi erbjuder en gratis provperiod så att ni kan testa alla funktioner i SentinelStack och se hur plattformen kan hjälpa just er organisation.
-        </p>
-      </details>
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-16 bg-gray-800 bg-opacity-5">
+    <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Priser</h2>
+      <p class="text-gray-300 text-lg">Flexibla abonnemang för alla behov – från startup till enterprise.</p>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+      <!-- Plan 1: Starter -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
+        <h3 class="text-2xl font-bold mb-1">Starter</h3>
+        <p class="text-sm text-gray-400 mb-4">Passar små team och pilotprojekt</p>
+        <div class="text-4xl font-bold mb-4">990 kr<span class="text-base font-medium text-gray-300">/mån</span></div>
+        <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+          <li>AI Act checklista</li>
+          <li>PDF-auditrapporter</li>
+          <li>Grundläggande GDPR-loggning</li>
+          <li>E-postsupport</li>
+        </ul>
+        <a href="#contact" class="mt-auto bg-cyan-600 text-white font-medium text-center py-2 rounded-md hover:bg-cyan-500 transition">Starta gratis pilot</a>
+      </div>
+      <!-- Plan 2: Growth -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
+        <h3 class="text-2xl font-bold mb-1">Growth</h3>
+        <p class="text-sm text-gray-400 mb-4">Passar växande företag</p>
+        <div class="text-4xl font-bold mb-4">2490 kr<span class="text-base font-medium text-gray-300">/mån</span></div>
+        <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+          <li>Allt i Starter</li>
+          <li>Realtidslarm</li>
+          <li>Fullständig GDPR-loggning</li>
+          <li>Team-hantering</li>
+        </ul>
+        <a href="#contact" class="mt-auto bg-cyan-600 text-white font-medium text-center py-2 rounded-md hover:bg-cyan-500 transition">Starta gratis pilot</a>
+      </div>
+      <!-- Plan 3: Premium -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
+        <h3 class="text-2xl font-bold mb-1">Premium</h3>
+        <p class="text-sm text-gray-400 mb-4">Passar stora organisationer</p>
+        <div class="text-2xl font-bold mb-4 text-gray-200">Skräddarsytt</div>
+        <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+          <li>Allt i Growth</li>
+          <li>Onboardingstöd</li>
+          <li>Integrations-API</li>
+          <li>Dedikerad kundansvarig</li>
+        </ul>
+        <a href="#contact" class="mt-auto border border-cyan-500 text-cyan-400 font-medium text-center py-2 rounded-md hover:bg-cyan-500 hover:text-gray-900 transition">Kontakta oss</a>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto px-6 py-16 text-center">
-    <h2 class="text-3xl font-bold font-dm mb-4">Kontakta oss</h2>
-    <p class="text-gray-300 mb-8 max-w-lg mx-auto">
-      Har du frågor eller vill veta mer? Fyll i formuläret så hör vi av oss.
-    </p>
-    <form action="mailto:support@sentinelstack.com" method="POST" class="max-w-md mx-auto text-left space-y-4">
-      <div>
-        <label class="block text-sm mb-1">Namn</label>
-        <input type="text" required class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:border-electricgreen focus:ring-electricgreen focus:ring-1 focus:outline-none" />
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Vad våra kunder säger</h2>
+      <p class="text-gray-300 text-lg">Röster från nöjda användare av SentinelStack</p>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-2">
+      <!-- Testimonial 1 -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <p class="text-lg italic mb-4">"SentinelStack hjälpte oss att uppnå efterlevnad av AI Act på rekordtid. Nu känner vi oss mycket tryggare med våra AI-system."</p>
+        <p class="font-semibold">Anna Karlsson</p>
+        <p class="text-sm text-gray-400">CTO, FinTech AB</p>
       </div>
-      <div>
-        <label class="block text-sm mb-1">Företag</label>
-        <input type="text" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:border-electricgreen focus:ring-electricgreen focus:ring-1 focus:outline-none" />
+      <!-- Testimonial 2 -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <p class="text-lg italic mb-4">"Tack vare SentinelStack kan vi proaktivt identifiera risker i vår AI innan de påverkar våra kunder."</p>
+        <p class="font-semibold">Johan Svensson</p>
+        <p class="text-sm text-gray-400">CIO, MediTech Corp</p>
       </div>
-      <div>
-        <label class="block text-sm mb-1">E-post</label>
-        <input type="email" required class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:border-electricgreen focus:ring-electricgreen focus:ring-1 focus:outline-none" />
-      </div>
-      <div>
-        <label class="block text-sm mb-1">Meddelande</label>
-        <textarea rows="4" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:border-electricgreen focus:ring-electricgreen focus:ring-1 focus:outline-none"></textarea>
-      </div>
-      <button type="submit" class="bg-electricgreen text-black font-bold py-3 px-6 rounded-md hover:bg-neonblue hover:text-black transition w-full">
-        Skicka
-      </button>
-    </form>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="py-16">
+    <div class="max-w-3xl mx-auto px-6 text-center mb-8">
+      <h2 class="text-3xl font-bold mb-4">Starta er gratis pilot</h2>
+      <p class="text-gray-300 text-lg">Fyll i er e-post så hör vårt team av sig och hjälper er komma igång.</p>
+    </div>
+    <div class="max-w-md mx-auto px-6">
+      <form class="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4">
+        <input type="email" placeholder="E-postadress" required class="w-full flex-1 bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+        <button type="submit" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-md hover:brightness-110 transition focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50 w-full sm:w-auto text-center">
+          Skicka
+        </button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-500 text-sm py-6">
-    © 2025 SentinelStack. Alla rättigheter förbehållna.
+  <footer class="py-8 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center text-gray-500 text-sm">
+      © 2025 SentinelStack. Alla rättigheter förbehållna.
+    </div>
   </footer>
 
-  <!-- Scroll reveal on scroll (simple implementation) -->
+  <!-- Scroll Reveal Animation Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      function revealOnScroll() {
-        const reveals = document.querySelectorAll('.reveal');
-        for (let el of reveals) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight * 0.9) {
-            el.classList.add('animate-fadeIn');
-            el.classList.remove('reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0');
+            entry.target.classList.remove('translate-y-8');
+            observer.unobserve(entry.target);
           }
-        }
-      }
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll(); // initial check
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
     });
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-button').onclick = function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    }
   </script>
+
 </body>
 </html>
