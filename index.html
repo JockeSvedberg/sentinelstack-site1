@@ -2,30 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SentinelStack Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SentinelStack</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #aff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
     }
-    .pricing-section {
+    header, footer {
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 2rem 1rem;
     }
-    .logo {
-      height: 48px;
-      margin-bottom: 0.5rem;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-    .slogan {
-      font-size: 1.8rem;
-      margin-bottom: 2.5rem;
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
     }
-    .toggle {
-      margin-bottom: 2rem;
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      background-color: #050505;
+    }
+    .feature-box {
+      border: 1px solid #00f0ff;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 280px;
+      background-color: #000;
+      text-align: left;
+    }
+    .feature-box h3 {
+      margin-top: 0;
     }
     .toggle input {
       display: none;
@@ -48,6 +64,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
+      padding: 3rem 1rem;
     }
     .plan {
       border: 1px solid #00f0ff;
@@ -56,6 +73,7 @@
       width: 270px;
       padding: 2rem;
       position: relative;
+      text-align: center;
     }
     .plan h2 {
       font-size: 1.2rem;
@@ -82,8 +100,12 @@
       color: #00f0ff;
       cursor: help;
     }
+    footer p {
+      font-size: 0.85rem;
+      color: #888;
+    }
     @media(max-width: 768px) {
-      .plans {
+      .plans, .features {
         flex-direction: column;
         align-items: center;
       }
@@ -91,69 +113,75 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="/sentinelstack-logo.png" alt="SentinelStack logo" style="height: 48px;" onerror="this.style.display='none';">
+    <h1>Predict. Prevent. Protect.</h1>
+    <p>SentinelStack levererar AI Act-efterlevnad, realtidslarm och avancerat säkerhetsskydd för din AI-verksamhet – snabbt, smart och automatiserat.</p>
+  </header>
 
-<section class="pricing-section">
-  <!-- Logo & Slogan -->
-  <div>
-    <img src="/sentinelstack-logo.png" alt="SentinelStack logo" class="logo" onerror="this.style.display='none';">
-    <h1 class="slogan">Predict. Prevent. Protect.</h1>
-  </div>
+  <section class="features">
+    <div class="feature-box">
+      <h3>🔍 AI Act Compliance</h3>
+      <p>Automatiserad övervakning och rapportering enligt EU:s nya AI-förordning.</p>
+    </div>
+    <div class="feature-box">
+      <h3>📩 Email Alerts</h3>
+      <p>Få realtidslarm via e-post om risker, anomalier och regulatoriska händelser.</p>
+    </div>
+    <div class="feature-box">
+      <h3>📊 PDF-rapporter</h3>
+      <p>Snygga, juridiskt användbara rapporter direkt till din inkorg eller datarum.</p>
+    </div>
+  </section>
 
-  <!-- Toggle monthly/yearly -->
-  <div class="toggle">
-    <input type="radio" id="monthly" name="billing" checked onchange="updatePrices()">
-    <label for="monthly">Monthly</label>
-    <input type="radio" id="yearly" name="billing" onchange="updatePrices()">
-    <label for="yearly">Yearly (save 20%)</label>
-  </div>
+  <section style="text-align: center;">
+    <div class="toggle">
+      <input type="radio" id="monthly" name="billing" checked onchange="updatePrices()">
+      <label for="monthly">Monthly</label>
+      <input type="radio" id="yearly" name="billing" onchange="updatePrices()">
+      <label for="yearly">Yearly (save 20%)</label>
+    </div>
+  </section>
 
-  <!-- Pricing Plans -->
-  <div class="plans">
-    
-    <!-- Starter Plan -->
+  <section class="plans">
     <div class="plan">
       <div class="tooltip" title="Perfect for solopreneurs and startups.">ⓘ</div>
       <h2>Starter – <span class="price" data-month="99" data-year="79">€99</span>/mo</h2>
       <p>Basic AI Act compliance tools</p>
       <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00">Buy Starter</a>
     </div>
-
-    <!-- Growth Plan -->
     <div class="plan">
       <div class="tooltip" title="Most popular. Includes all reports and alerts.">ⓘ</div>
       <h2>Growth – <span class="price" data-month="249" data-year="199">€249</span>/mo</h2>
       <p>Full access + PDF reports + Email alerts</p>
       <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01">Buy Growth</a>
     </div>
-
-    <!-- Premium Plan -->
     <div class="plan">
       <div class="tooltip" title="Best for growing teams and consultants.">ⓘ</div>
       <h2>Premium – <span class="price" data-month="499" data-year="399">€499</span>/mo</h2>
       <p>Dedicated agent + 24/7 support + API</p>
       <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02">Buy Premium</a>
     </div>
-
-    <!-- Enterprise Plan -->
     <div class="plan">
       <div class="tooltip" title="For large orgs. Includes onboarding + compliance audit.">ⓘ</div>
       <h2>Enterprise – Custom</h2>
       <p>Full suite + SLA + audit + private hosting</p>
       <a href="mailto:ceo@sentinelstack.tech">Contact Sales</a>
     </div>
+  </section>
 
-  </div>
-</section>
+  <footer>
+    <p>&copy; 2025 SentinelStack AB – All rights reserved.</p>
+  </footer>
 
-<script>
-  function updatePrices() {
-    const yearly = document.getElementById("yearly").checked;
-    document.querySelectorAll(".price").forEach(span => {
-      const val = yearly ? span.dataset.year : span.dataset.month;
-      span.innerText = "€" + val;
-    });
-  }
-</script>
-
+  <script>
+    function updatePrices() {
+      const yearly = document.getElementById("yearly").checked;
+      document.querySelectorAll(".price").forEach(span => {
+        const val = yearly ? span.dataset.year : span.dataset.month;
+        span.innerText = "€" + val;
+      });
+    }
+  </script>
 </body>
 </html>
