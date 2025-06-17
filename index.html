@@ -4,35 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SentinelStack – AI-driven Monitoring</title>
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animate on Scroll CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <!-- FontAwesome 6 Free CSS for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Anpassad bakgrund med neon-blobs (radial gradients) i hero */
     .hero-section {
       background: radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.15), transparent 60%), 
                   radial-gradient(circle at 80% 60%, rgba(57, 255, 20, 0.15), transparent 60%), 
-                  #000; /* svart basbakgrund */
+                  #000;
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
     }
-    /* Neon-knapp-glow på hover */
     .btn-neon:hover {
       box-shadow: 0 0 15px #00ffff, 0 0 15px #00ffff;
     }
   </style>
 </head>
 <body class="bg-black text-gray-200 font-sans antialiased">
-  <!-- Navigationsfält -->
   <header class="flex items-center justify-between px-6 py-4 bg-transparent">
     <a href="#" class="flex items-center space-x-2">
-      <!-- Företagslogotyp i nav (SVG från extern källa) -->
-      <img src="https://www.sentinelstack.tech/logo.svg" alt="SentinelStack Logo" class="h-8 w-auto" />
-      <span class="text-xl font-bold text-white">SentinelStack</span>
+      <span class="text-2xl font-bold text-white">SentinelStack</span>
     </a>
     <nav class="hidden md:flex items-center space-x-6">
       <a href="#features" class="text-gray-300 hover:text-white transition">Funktioner</a>
@@ -41,21 +33,17 @@
       <a href="#" class="text-gray-300 hover:text-white transition">Kontakt</a>
     </nav>
     <div class="md:hidden">
-      <!-- Mobilmeny-knapp (hamburgare) - enkel version -->
       <button class="text-gray-300 focus:outline-none hover:text-white">
         <i class="fa-solid fa-bars text-2xl"></i>
       </button>
     </div>
   </header>
 
-  <!-- Hero-sektion -->
   <section class="hero-section relative overflow-hidden flex flex-col items-center justify-center text-center px-6 py-24">
-    <!-- Neon blobs i bakgrunden -->
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute top-[-50px] left-[-100px] w-[300px] h-[300px] bg-[#00ffff] opacity-20 blur-3xl rounded-full filter"></div>
       <div class="absolute bottom-[-50px] right-[-100px] w-[300px] h-[300px] bg-[#39ff14] opacity-20 blur-3xl rounded-full filter"></div>
     </div>
-    <!-- Hero text + CTA ovanpå -->
     <div class="relative z-10 max-w-xl mx-auto bg-white/10 backdrop-blur-md rounded-xl p-8">
       <h1 class="text-3xl sm:text-5xl font-extrabold text-white">AI-övervakning av din stack i realtid</h1>
       <p class="mt-4 text-gray-300 text-lg">Förutse problem, få <span class="text-[#00ffff] font-semibold">omedelbara larm</span> och håll dina system <span class="text-[#39ff14] font-semibold">säkrade</span> och optimerade.</p>
@@ -68,29 +56,24 @@
     </div>
   </section>
 
-  <!-- Feature-sektion -->
   <section id="features" class="max-w-5xl mx-auto px-6 py-16">
     <h2 class="text-2xl sm:text-4xl font-bold text-white text-center mb-12">Kraftfulla funktioner</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Feature 1 -->
       <div class="text-center p-6 bg-white/5 hover:bg-white/10 rounded-lg transition" data-aos="fade-up">
         <i class="fa-solid fa-check text-[#39ff14] text-4xl mb-4"></i>
         <h3 class="text-xl text-white font-semibold mb-2">Allt-i-ett Översikt</h3>
         <p class="text-gray-300 text-sm">Få full koll på loggar, metrik och incidenter på ett ställe med vår sammanhållna instrumentpanel.</p>
       </div>
-      <!-- Feature 2 -->
       <div class="text-center p-6 bg-white/5 hover:bg-white/10 rounded-lg transition" data-aos="fade-up" data-aos-delay="100">
         <i class="fa-solid fa-file-lines text-[#00ffff] text-4xl mb-4"></i>
         <h3 class="text-xl text-white font-semibold mb-2">Detaljerade loggrapporter</h3>
         <p class="text-gray-300 text-sm">Automatiska insikter från dina loggfiler – sök, filtrera och analysera data med hjälp av AI för snabba beslut.</p>
       </div>
-      <!-- Feature 3 -->
       <div class="text-center p-6 bg-white/5 hover:bg-white/10 rounded-lg transition" data-aos="fade-up" data-aos-delay="200">
         <i class="fa-solid fa-bell text-[#00ffff] text-4xl mb-4"></i>
         <h3 class="text-xl text-white font-semibold mb-2">Omedelbara larm</h3>
         <p class="text-gray-300 text-sm">Få realtidsaviseringar vid anomali eller driftstopp. Anpassa tröskelvärden och få larm via e-post, Slack m.m.</p>
       </div>
-      <!-- Feature 4 -->
       <div class="text-center p-6 bg-white/5 hover:bg-white/10 rounded-lg transition" data-aos="fade-up" data-aos-delay="300">
         <i class="fa-solid fa-code text-[#39ff14] text-4xl mb-4"></i>
         <h3 class="text-xl text-white font-semibold mb-2">Smidig API-integration</h3>
@@ -99,72 +82,61 @@
     </div>
   </section>
 
-  <!-- Prissättning-sektion -->
   <section id="pricing" class="px-6 py-16 bg-gray-900/50">
     <h2 class="text-2xl sm:text-4xl font-bold text-white text-center mb-12">Prissättning</h2>
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <!-- Pricing Card 1 -->
       <div class="relative p-8 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 text-center text-white" data-aos="fade-up">
-        <h3 class="text-xl font-semibold mb-2">Bas</h3>
+        <h3 class="text-xl font-semibold mb-2">Starter</h3>
         <p class="text-5xl font-extrabold mb-4">0 kr<span class="text-lg font-normal text-gray-300">/månad</span></p>
         <ul class="text-left text-gray-200 mb-6 space-y-2">
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>1 projekt</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Begränsad loggvolym</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>E-postaviseringar</li>
+          <li>✓ Riskklassificering</li>
+          <li>✓ PDF-checklista</li>
+          <li>✓ AI Act-status</li>
         </ul>
-        <a href="#" class="block w-full py-2 bg-[#00ffff] text-black font-semibold rounded hover:opacity-90 transition">Börja gratis</a>
+        <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00" class="block w-full py-2 bg-[#00ffff] text-black font-semibold rounded hover:opacity-90 transition">Kom igång gratis</a>
         <div class="absolute top-3 right-3 bg-[#00ffff] text-black text-xs font-bold px-2 py-1 rounded-full">Gratis</div>
       </div>
-      <!-- Pricing Card 2 (Pro) -->
       <div class="relative p-8 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 text-center text-white scale-105 shadow-lg" data-aos="fade-up" data-aos-delay="100">
         <h3 class="text-xl font-semibold mb-2">Pro</h3>
-        <p class="text-5xl font-extrabold mb-4">699 kr<span class="text-lg font-normal text-gray-300">/månad</span></p>
+        <p class="text-5xl font-extrabold mb-4">499 kr<span class="text-lg font-normal text-gray-300">/månad</span></p>
         <ul class="text-left text-gray-200 mb-6 space-y-2">
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Upp till 10 projekt</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Utökad loggvolym</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Realtidsaviseringar (SMS/Slack)</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Grundläggande support</li>
+          <li>✓ PDF-revisioner</li>
+          <li>✓ Realtidslarm</li>
+          <li>✓ Onboardingstöd</li>
+          <li>✓ GDPR-loggning</li>
         </ul>
-        <a href="#" class="block w-full py-2 bg-[#00ffff] text-black font-semibold rounded hover:opacity-90 transition">Välj Pro</a>
+        <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01" class="block w-full py-2 bg-green-400 text-black font-semibold rounded hover:bg-cyan-400 transition">Välj Pro</a>
         <div class="absolute top-3 right-3 bg-[#39ff14] text-black text-xs font-bold px-2 py-1 rounded-full">Populär</div>
       </div>
-      <!-- Pricing Card 3 (Enterprise) -->
       <div class="relative p-8 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 text-center text-white" data-aos="fade-up" data-aos-delay="200">
         <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
-        <p class="text-4xl font-extrabold mb-4">Kontakta oss</p>
+        <p class="text-4xl font-extrabold mb-4">Offert</p>
         <ul class="text-left text-gray-200 mb-6 space-y-2">
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Obegränsat antal projekt</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Skräddarsydd volym &amp; retention</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Prioriterad support (24/7)</li>
-          <li><i class="fa-solid fa-check text-[#39ff14] mr-2"></i>Egna SLA:er &amp; onboarding</li>
+          <li>✓ API-access & adminportal</li>
+          <li>✓ Prioriterad support</li>
+          <li>✓ AI Act-certifieringshjälp</li>
+          <li>✓ Egen SLA</li>
         </ul>
-        <a href="#" class="block w-full py-2 bg-[#00ffff] text-black font-semibold rounded hover:opacity-90 transition">Kontakta sälj</a>
+        <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02" class="block w-full py-2 bg-[#00ffff] text-black font-semibold rounded hover:opacity-90 transition">Kontakta sälj</a>
         <div class="absolute top-3 right-3 bg-[#00ffff] text-black text-xs font-bold px-2 py-1 rounded-full">Skräddarsydd</div>
       </div>
     </div>
   </section>
 
-  <!-- Betrodd av-sektion -->
   <section id="trust" class="px-6 py-16 bg-transparent">
     <h2 class="text-xl sm:text-3xl font-bold text-white text-center mb-8">Betrodd av innovativa företag</h2>
     <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
-      <!-- OpenAI logo -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI" class="h-8 filter brightness-0 invert" />
-      <!-- Stripe logo -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo,_revised_2016.svg" alt="Stripe" class="h-8 filter brightness-0 invert" />
-      <!-- Vercel logo -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vercel_logo_2025.svg" alt="Vercel" class="h-8 filter brightness-0 invert" />
-      <!-- EU flag -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/EU_Flag_specification.svg" alt="EU flag" class="h-8" />
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="px-6 py-8 text-center text-gray-500 text-sm bg-black">
     <p>&copy; 2025 SentinelStack. Alla rättigheter förbehållna.</p>
   </footer>
 
-  <!-- AOS JS och init -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
