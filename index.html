@@ -21,7 +21,7 @@
     }
     header p {
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
     }
     .features {
@@ -74,6 +74,10 @@
       padding: 2rem;
       position: relative;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 280px;
     }
     .plan h2 {
       font-size: 1.2rem;
@@ -81,7 +85,7 @@
     }
     .plan p {
       font-size: 0.95rem;
-      margin-bottom: 1.2rem;
+      flex-grow: 1;
     }
     .plan a {
       display: inline-block;
@@ -91,6 +95,7 @@
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       text-decoration: none;
+      margin-top: 1rem;
     }
     .tooltip {
       position: absolute;
@@ -116,21 +121,25 @@
   <header>
     <img src="/sentinelstack-logo.png" alt="SentinelStack logo" style="height: 48px;" onerror="this.style.display='none';">
     <h1>Predict. Prevent. Protect.</h1>
-    <p>SentinelStack levererar AI Act-efterlevnad, realtidslarm och avancerat säkerhetsskydd för din AI-verksamhet – snabbt, smart och automatiserat.</p>
+    <p>
+      SentinelStack is your all-in-one solution for AI compliance, real-time threat detection,
+      automated PDF reporting, and business-grade infrastructure for safely deploying AI systems
+      in alignment with the EU AI Act and modern cybersecurity standards.
+    </p>
   </header>
 
   <section class="features">
     <div class="feature-box">
       <h3>🔍 AI Act Compliance</h3>
-      <p>Automatiserad övervakning och rapportering enligt EU:s nya AI-förordning.</p>
+      <p>Automated monitoring and documentation for high-risk systems under the European AI Act.</p>
     </div>
     <div class="feature-box">
       <h3>📩 Email Alerts</h3>
-      <p>Få realtidslarm via e-post om risker, anomalier och regulatoriska händelser.</p>
+      <p>Real-time notifications on compliance breaches, data leaks, and usage anomalies.</p>
     </div>
     <div class="feature-box">
-      <h3>📊 PDF-rapporter</h3>
-      <p>Snygga, juridiskt användbara rapporter direkt till din inkorg eller datarum.</p>
+      <h3>📊 PDF Reports</h3>
+      <p>Auditable, signed PDF reports delivered weekly to your team or compliance officer.</p>
     </div>
   </section>
 
@@ -159,11 +168,11 @@
     <div class="plan">
       <div class="tooltip" title="Best for growing teams and consultants.">ⓘ</div>
       <h2>Premium – <span class="price" data-month="499" data-year="399">€499</span>/mo</h2>
-      <p>Dedicated agent + 24/7 support + API</p>
+      <p>Dedicated agent + 24/7 support + API access</p>
       <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02">Buy Premium</a>
     </div>
     <div class="plan">
-      <div class="tooltip" title="For large orgs. Includes onboarding + compliance audit.">ⓘ</div>
+      <div class="tooltip" title="For large orgs. Includes onboarding + audit + SLA.">ⓘ</div>
       <h2>Enterprise – Custom</h2>
       <p>Full suite + SLA + audit + private hosting</p>
       <a href="mailto:ceo@sentinelstack.tech">Contact Sales</a>
