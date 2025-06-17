@@ -21,10 +21,6 @@
     header, footer {
       text-align: center;
       padding: 2rem 1rem;
-      position: sticky;
-      top: 0;
-      background-color: #000;
-      z-index: 999;
     }
     h1 {
       font-size: 2.7rem;
@@ -62,26 +58,6 @@
       padding: 2rem;
       width: 300px;
     }
-    .toggle {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .toggle input {
-      display: none;
-    }
-    .toggle label {
-      background-color: #111;
-      color: #aff;
-      padding: 0.5rem 1.2rem;
-      border: 1px solid #00f0ff;
-      cursor: pointer;
-      border-radius: 8px;
-      margin: 0 5px;
-    }
-    .toggle input:checked + label {
-      background-color: #00f0ff;
-      color: #000;
-    }
     .plans {
       display: flex;
       flex-wrap: wrap;
@@ -115,23 +91,6 @@
       text-align: center;
       margin-top: 1rem;
     }
-    .trust-logos img {
-      height: 40px;
-      margin: 0 1rem;
-      filter: brightness(2);
-    }
-    .badge {
-      border: 1px solid #00f0ff;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      background-color: #050505;
-      margin: 0.5rem;
-      display: inline-block;
-    }
-    footer p {
-      font-size: 0.85rem;
-      color: #888;
-    }
     .contact-form {
       margin-top: 2rem;
     }
@@ -161,9 +120,44 @@
     <a href="#plans" class="cta-button">Start Free Risk Assessment</a>
   </header>
 
-  <!-- Sections here (features, audience, etc.) remain unchanged -->
+  <section class="features">
+    <div class="feature-box"><h3>🔍 AI Act Compliance</h3><p>Live policy scanning, risk categorization and classification under the EU AI Act.</p></div>
+    <div class="feature-box"><h3>📩 Real-time Alerts</h3><p>Get email alerts for breaches, anomalies, high-risk interactions and unverified outputs.</p></div>
+    <div class="feature-box"><h3>📊 PDF Compliance Reports</h3><p>Download-ready PDF reports that are signed, timestamped and audit-proof.</p></div>
+  </section>
 
-  <!-- Add Contact Us Section before Footer -->
+  <section class="plans" id="plans">
+    <div class="plan">
+      <h2>Starter – €99/mo</h2>
+      <ul>
+        <li>Basic AI Act tools</li>
+        <li>1 user account</li>
+        <li>Weekly email summary</li>
+      </ul>
+      <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00">Buy Starter</a>
+    </div>
+    <div class="plan">
+      <h2>Growth – €249/mo</h2>
+      <ul>
+        <li>Everything in Starter</li>
+        <li>Unlimited alerts</li>
+        <li>Daily PDF reports</li>
+        <li>3 team members</li>
+      </ul>
+      <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01">Buy Growth</a>
+    </div>
+    <div class="plan">
+      <h2>Premium – €499/mo</h2>
+      <ul>
+        <li>Everything in Growth</li>
+        <li>Dedicated agent access</li>
+        <li>24/7 support</li>
+        <li>API integrations</li>
+      </ul>
+      <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02">Buy Premium</a>
+    </div>
+  </section>
+
   <section style="text-align: center; padding: 4rem 1rem;">
     <h2 style="color: #aff; font-size: 1.8rem;">Contact Us</h2>
     <p style="color: #ccd; max-width: 600px; margin: auto;">
@@ -179,17 +173,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 SentinelStack AB – All rights reserved. | <a href="/terms.html" style="color:#00f0ff">Terms</a> | <a href="/privacy.html" style="color:#00f0ff">Privacy</a> | <a href="https://www.linkedin.com/company/sentinelstack" style="color:#00f0ff">LinkedIn</a></p>
+    <p>&copy; 2025 SentinelStack AB – All rights reserved.</p>
   </footer>
-
-  <script>
-    function updatePrices() {
-      const yearly = document.getElementById("yearly").checked;
-      document.querySelectorAll(".price").forEach(span => {
-        const val = yearly ? span.dataset.year : span.dataset.month;
-        span.innerText = "€" + val;
-      });
-    }
-  </script>
 </body>
 </html>
