@@ -4,87 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SentinelStack – AI Act Compliance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #0a0a0a;
       color: #e0f0ff;
+      line-height: 1.6;
     }
     header, footer {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
+    }
+    header img.logo {
+      max-height: 60px;
+      margin-bottom: 1rem;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #00f0ff;
+      margin-bottom: 0.5rem;
     }
     .hero p {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: #c0d0e0;
+      margin-top: 0;
     }
     .cta-button {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 2rem;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2.2rem;
       background-color: #00f0ff;
       color: #000;
-      font-weight: bold;
+      font-weight: 600;
       border: none;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #00c0cc;
     }
     .section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      border-left: 4px solid #00f0ff;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
     }
     .pricing {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .pricing .tier {
       background: #111;
       border: 1px solid #00f0ff;
-      padding: 1rem;
-      border-radius: 8px;
+      padding: 1.5rem;
+      border-radius: 12px;
       text-align: center;
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+    }
+    .pricing .tier h3 {
+      font-size: 1.3rem;
+      color: #00f0ff;
+      margin-bottom: 0.5rem;
+    }
+    .pricing .tier p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
     }
     form {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
-      max-width: 400px;
+      max-width: 500px;
       margin: 2rem auto;
     }
     input, textarea {
-      padding: 0.5rem;
-      border-radius: 4px;
+      padding: 0.75rem;
+      border-radius: 5px;
       border: none;
       background: #222;
       color: #fff;
+      font-size: 1rem;
     }
     button {
       background: #00f0ff;
       color: #000;
       padding: 0.75rem;
-      border: none;
       font-weight: bold;
       cursor: pointer;
       border-radius: 5px;
+      border: none;
+      font-size: 1rem;
     }
-    footer p {
-      font-size: 0.9rem;
-      color: #888;
+    button:hover {
+      background: #00c0cc;
+    }
+    footer p, footer a {
+      font-size: 0.85rem;
+      color: #777;
+      text-decoration: none;
+      margin: 0 0.25rem;
     }
   </style>
 </head>
 <body>
   <header class="hero">
+    <img src="https://via.placeholder.com/200x60?text=SentinelStack+Logo" alt="SentinelStack logo" class="logo">
     <h1>Predict. Prevent. Protect.</h1>
     <p>AI Act Compliance – Automated for Small EU Businesses</p>
     <a href="#pricing" class="cta-button">Start Your Free Trial</a>
@@ -105,27 +152,30 @@
     </ul>
   </section>
 
-  <section id="pricing" class="section pricing">
-    <div class="tier">
-      <h3>Starter – EUR 99/mo</h3>
-      <p>Basic AI Act compliance tools</p>
-      <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00" class="cta-button">Get Started</a>
-    </div>
-    <div class="tier">
-      <h3>Growth – EUR 249/mo</h3>
-      <p>Full access + PDF + Telegram alerts</p>
-      <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01" class="cta-button">Start Trial</a>
-    </div>
-    <div class="tier">
-      <h3>Premium – EUR 499/mo</h3>
-      <p>Dedicated agent + support + API</p>
-      <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02" class="cta-button">Talk to Sales</a>
+  <section id="pricing" class="section">
+    <h2>Choose Your Plan</h2>
+    <div class="pricing">
+      <div class="tier">
+        <h3>Starter – EUR 99/mo</h3>
+        <p>Basic AI Act compliance tools</p>
+        <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00" class="cta-button">Get Started</a>
+      </div>
+      <div class="tier">
+        <h3>Growth – EUR 249/mo</h3>
+        <p>Full access + PDF + Telegram alerts</p>
+        <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01" class="cta-button">Start Trial</a>
+      </div>
+      <div class="tier">
+        <h3>Premium – EUR 499/mo</h3>
+        <p>Dedicated agent + support + API</p>
+        <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02" class="cta-button">Talk to Sales</a>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <h2>Contact Us</h2>
-    <form action="mailto:ceo@sentinelstack.tech" method="post" enctype="text/plain">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
@@ -134,7 +184,12 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 SentinelStack AB | ceo@sentinelstack.tech</p>
+    <p>
+      &copy; 2025 SentinelStack AB |
+      <a href="mailto:ceo@sentinelstack.tech">ceo@sentinelstack.tech</a> |
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Use</a>
+    </p>
   </footer>
 </body>
 </html>
