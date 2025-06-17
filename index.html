@@ -38,7 +38,7 @@
       text-decoration: none;
       font-size: 1.1rem;
     }
-    .features, .audience, .how-it-works {
+    .features, .audience, .how-it-works, .inclusions {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -46,7 +46,7 @@
       padding: 3rem 1rem;
       background-color: #050505;
     }
-    .feature-box, .audience-box, .how-box {
+    .feature-box, .audience-box, .how-box, .inclusion-box {
       border: 1px solid #00f0ff;
       border-radius: 12px;
       padding: 2rem;
@@ -88,15 +88,20 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 300px;
+      height: 350px;
     }
     .plan h2 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
-    .plan p {
-      font-size: 0.95rem;
+    .plan ul {
+      text-align: left;
+      font-size: 0.9rem;
+      padding-left: 1.2rem;
       flex-grow: 1;
+    }
+    .plan li {
+      margin-bottom: 0.5rem;
     }
     .plan a {
       display: inline-block;
@@ -121,7 +126,7 @@
       color: #888;
     }
     @media(max-width: 768px) {
-      .plans, .features, .audience, .how-it-works {
+      .plans, .features, .audience, .how-it-works, .inclusions {
         flex-direction: column;
         align-items: center;
       }
@@ -183,6 +188,19 @@
     </div>
   </section>
 
+  <section class="inclusions">
+    <div class="inclusion-box">
+      <h3>What's included in every plan</h3>
+      <ul>
+        <li>✔️ Secure AI-agent deployment</li>
+        <li>✔️ PDF compliance engine</li>
+        <li>✔️ EU AI Act risk scanning</li>
+        <li>✔️ Real-time email alerts</li>
+        <li>✔️ GDPR-compatible data flow</li>
+      </ul>
+    </div>
+  </section>
+
   <section style="text-align: center;">
     <div class="toggle">
       <input type="radio" id="monthly" name="billing" checked onchange="updatePrices()">
@@ -196,25 +214,44 @@
     <div class="plan">
       <div class="tooltip" title="Perfect for solopreneurs and startups.">ⓘ</div>
       <h2>Starter – <span class="price" data-month="99" data-year="79">€99</span>/mo</h2>
-      <p>Basic AI Act compliance tools</p>
+      <ul>
+        <li>Basic AI Act tools</li>
+        <li>1 user account</li>
+        <li>Weekly email summary</li>
+      </ul>
       <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00">Buy Starter</a>
     </div>
     <div class="plan">
       <div class="tooltip" title="Most popular. Includes all reports and alerts.">ⓘ</div>
       <h2>Growth – <span class="price" data-month="249" data-year="199">€249</span>/mo</h2>
-      <p>Full access + PDF reports + Email alerts</p>
+      <ul>
+        <li>Everything in Starter</li>
+        <li>Unlimited alerts</li>
+        <li>PDF reports (daily)</li>
+        <li>3 team members</li>
+      </ul>
       <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01">Buy Growth</a>
     </div>
     <div class="plan">
       <div class="tooltip" title="Best for growing teams and consultants.">ⓘ</div>
       <h2>Premium – <span class="price" data-month="499" data-year="399">€499</span>/mo</h2>
-      <p>Dedicated agent + 24/7 support + API access</p>
+      <ul>
+        <li>Everything in Growth</li>
+        <li>Dedicated agent access</li>
+        <li>24/7 support</li>
+        <li>API integrations</li>
+      </ul>
       <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02">Buy Premium</a>
     </div>
     <div class="plan">
       <div class="tooltip" title="For large orgs. Includes onboarding + audit + SLA.">ⓘ</div>
       <h2>Enterprise – Custom</h2>
-      <p>Full suite + SLA + audit + private hosting</p>
+      <ul>
+        <li>All Premium features</li>
+        <li>Private hosting option</li>
+        <li>SLA, audit & onboarding</li>
+        <li>Custom billing & reporting</li>
+      </ul>
       <a href="mailto:ceo@sentinelstack.tech">Contact Sales</a>
     </div>
   </section>
