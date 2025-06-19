@@ -54,6 +54,17 @@
   </style>
 </head>
 
+  <!-- Scroll Progress Script -->
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+  });
+</script>
+
+  
 <body class="text-gray-200 bg-black font-sans antialiased">
   <!-- Scroll Progress Bar -->
   <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 w-0 z-50"></div>
@@ -356,7 +367,7 @@
   </div>
 </section>
 <section id="pricing" class="max-w-6xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-4xl font-bold text-center mb-16">Våra Paket</h2>
+  <h2 class="text-4xl font-bold text-center mb-16"> </h2>
   <div class="grid md:grid-cols-3 gap-10">
 
     </div>
