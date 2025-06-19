@@ -128,33 +128,35 @@
       Används av utvecklare, startups och compliance-experter i hela Europa.
     </div>
 
-    <!-- CTA-knappar -->
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
-      <a href="#signup" class="px-6 py-3 bg-green-500 text-black text-lg font-semibold rounded shadow-md hover:bg-green-400 transition">
-        Kom igång gratis
-      </a>
-      <a href="#demo" class="px-6 py-3 border border-cyan-400 text-cyan-400 text-lg rounded hover:bg-cyan-400 hover:text-black transition">
-        Se live-demo
-      </a>
-    </div>
-
-    <!-- Mini-leadform -->
-    <form action="https://hooks.zapier.com/hooks/catch/17250720/3r8w6qe/" method="POST" class="flex flex-col sm:flex-row items-center gap-3 bg-gray-900 bg-opacity-70 backdrop-blur-md p-4 rounded-xl border border-cyan-500 shadow-lg w-full max-w-2xl mx-auto">
-      <input
-        type="email"
-        name="email"
-        placeholder="Din e-postadress"
-        required
-        class="w-full sm:w-72 px-4 py-2 rounded bg-gray-900 text-white border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-200"
-      />
-      <button
-        type="submit"
-        class="px-4 py-2 bg-cyan-400 text-black font-semibold rounded hover:bg-cyan-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-200"
-      >
-        Ladda ner AI Act-checklistan
-      </button>
-    </form>
+<div class="w-full flex flex-col items-center justify-center space-y-6 max-w-xl mx-auto">
+  <!-- Knappar -->
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+    <a href="#signup" class="w-full sm:w-auto px-6 py-3 bg-green-500 text-black text-lg font-semibold rounded-md shadow hover:bg-green-400 transition">
+      Kom igång gratis
+    </a>
+    <a href="#demo" class="w-full sm:w-auto px-6 py-3 border border-cyan-400 text-cyan-300 text-lg font-medium rounded-md hover:bg-cyan-400 hover:text-black transition">
+      Se live-demo
+    </a>
   </div>
+
+  <!-- Formulär -->
+  <form action="https://hooks.zapier.com/hooks/catch/17250720/3r8w6qe/" method="POST" class="flex flex-col sm:flex-row items-center justify-center w-full gap-3 bg-gray-800/70 backdrop-blur-md p-4 rounded-xl border border-cyan-500 shadow-lg">
+    <input
+      type="email"
+      name="email"
+      placeholder="Din e‑postadress"
+      required
+      class="w-full sm:w-72 px-4 py-2 rounded-md bg-gray-900 text-white placeholder-gray-400 border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-200"
+    />
+    <button
+      type="submit"
+      class="w-full sm:w-auto px-5 py-2 bg-cyan-400 text-black font-semibold rounded-md hover:bg-cyan-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-200"
+    >
+      Ladda ner AI Act‑checklistan
+    </button>
+  </form>
+</div>
+
 </section>
 
 <!-- Glow CSS animation -->
@@ -248,53 +250,53 @@
   </div>
 </section>
 <!-- Pricing Section -->
-<section id="pricing" class="max-w-6xl mx-auto py-20 px-6">
-  <h2 class="text-3xl font-bold text-center mb-12">Prismodeller</h2>
-  <div class="grid md:grid-cols-3 gap-8">
-    
-    <!-- Plan 1: Gratis -->
-    <div class="border border-gray-700 bg-black bg-opacity-40 rounded-lg p-6 flex flex-col shadow-inner">
-      <h3 class="text-2xl font-semibold mb-2">Start</h3>
-      <p class="text-3xl font-bold text-green-400 mb-4">0 kr/mån</p>
-      <p class="mb-6 text-sm text-gray-300">Perfekt för att utforska grunderna i AI-regelefterlevnad.</p>
-      <ul class="text-sm text-gray-200 space-y-2 mb-6">
-        <li>✔ Upp till 3 AI-projekt</li>
-        <li>✔ Grundläggande kontrollpunkter</li>
-        <li>✔ E-postsupport</li>
+<section id="pricing" class="max-w-6xl mx-auto py-24 px-6 text-white">
+  <h2 class="text-4xl font-bold text-center mb-16">Våra Paket</h2>
+  <div class="grid md:grid-cols-3 gap-10">
+
+    <!-- Gratisplan -->
+    <div class="border border-gray-700 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg">
+      <h3 class="text-2xl font-semibold mb-2 text-center">Gratis</h3>
+      <p class="text-4xl font-bold text-green-400 text-center mb-4">0 kr</p>
+      <p class="text-sm text-gray-400 text-center mb-6">Perfekt för att komma igång med AI compliance.</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-8">
+        <li>✓ Upp till 3 AI-projekt</li>
+        <li>✓ Grundläggande compliance-kontroller</li>
+        <li>✓ E-postsupport</li>
       </ul>
-      <a href="#signup" class="mt-auto text-center bg-green-500 text-black font-semibold py-2 rounded hover:bg-green-400 transition">Börja gratis</a>
+      <a href="#signup" class="mt-auto text-center bg-green-500 text-black font-semibold py-3 rounded-lg hover:bg-green-400 transition">Välj Gratis</a>
     </div>
 
-    <!-- Plan 2: Pro (highlighted) -->
-    <div class="border-2 border-cyan-400 rounded-lg p-6 flex flex-col bg-gradient-to-b from-black via-gray-900 to-black shadow-lg shadow-cyan-500/20">
-      <h3 class="text-2xl font-semibold mb-2">Pro</h3>
-      <p class="text-3xl font-bold text-green-400 mb-4">799 kr/mån</p>
-      <p class="mb-6 text-sm text-gray-300">För team som aktivt vill följa AI Act och minska risker.</p>
-      <ul class="text-sm text-gray-200 space-y-2 mb-6">
-        <li>✔ Upp till 10 AI-projekt</li>
-        <li>✔ Avancerade risk- och regelefterlevnadskontroller</li>
-        <li>✔ Realtidsvarningar vid potentiella överträdelser</li>
-        <li>✔ Prioriterad e-postsupport</li>
+    <!-- Proplan -->
+    <div class="border border-cyan-500 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-cyan-500/50 shadow-lg scale-105">
+      <h3 class="text-2xl font-semibold mb-2 text-center">Pro</h3>
+      <p class="text-4xl font-bold text-cyan-300 text-center mb-4">799 kr/mån</p>
+      <p class="text-sm text-gray-400 text-center mb-6">För startups & team som vill växa med full koll.</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-8">
+        <li>✓ Upp till 10 AI-projekt</li>
+        <li>✓ Avancerade compliance-kontroller</li>
+        <li>✓ Realtids-övervakning & larm</li>
+        <li>✓ Prioriterad support</li>
       </ul>
-      <a href="#signup" class="mt-auto text-center bg-green-500 text-black font-semibold py-2 rounded hover:bg-green-400 transition">Välj Pro</a>
+      <a href="#signup" class="mt-auto text-center bg-cyan-400 text-black font-semibold py-3 rounded-lg hover:bg-cyan-300 transition">Välj Pro</a>
     </div>
 
-    <!-- Plan 3: Enterprise -->
-    <div class="border border-gray-700 bg-black bg-opacity-40 rounded-lg p-6 flex flex-col">
-      <h3 class="text-2xl font-semibold mb-2">Enterprise</h3>
-      <p class="text-3xl font-bold text-green-400 mb-4">Kontakta oss</p>
-      <p class="mb-6 text-sm text-gray-300">Skräddarsydd lösning för större organisationer med höga krav.</p>
-      <ul class="text-sm text-gray-200 space-y-2 mb-6">
-        <li>✔ Obegränsat antal projekt</li>
-        <li>✔ Anpassade kontroller, integrationer & rapporter</li>
-        <li>✔ Dedikerad kontaktperson & onboarding</li>
-        <li>✔ 24/7 tillgång till vårt expertteam</li>
+    <!-- Enterpriseplan -->
+    <div class="border border-gray-700 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg">
+      <h3 class="text-2xl font-semibold mb-2 text-center">Enterprise</h3>
+      <p class="text-4xl font-bold text-purple-300 text-center mb-4">Kontakta oss</p>
+      <p class="text-sm text-gray-400 text-center mb-6">För stora organisationer med höga krav.</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-8">
+        <li>✓ Obegränsat antal projekt</li>
+        <li>✓ Anpassade policys & integrationer</li>
+        <li>✓ Dedikerad CSM & onboarding</li>
+        <li>✓ 24/7 premiumsupport</li>
       </ul>
-      <a href="#contact" class="mt-auto text-center bg-green-500 text-black font-semibold py-2 rounded hover:bg-green-400 transition">Kontakta sälj</a>
+      <a href="#contact" class="mt-auto text-center bg-purple-400 text-black font-semibold py-3 rounded-lg hover:bg-purple-300 transition">Kontakta sälj</a>
     </div>
-
   </div>
 </section>
+
 
 <!-- FAQ Section -->
 <section id="faq" class="max-w-4xl mx-auto py-20 px-6">
