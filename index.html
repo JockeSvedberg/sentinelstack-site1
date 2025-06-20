@@ -1,40 +1,41 @@
 <html lang="EN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SentinelStack – AI-säkerhet & Compliance enligt AI Act 2025</title>
-  
-  <!-- SEO & Metadata -->
-  <meta name="description" content="Bygg AI som följer lagen. SentinelStack hjälper dig automatiskt uppfylla AI Act-kraven med spårbarhet, riskbedömning och PDF-rapporter.">
-  <meta name="keywords" content="AI Act, compliance, AI-säkerhet, EU AI-lag, automatiserad dokumentation, SentinelStack">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SentinelStack – EU AI Act Compliance Automation</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Automate your AI Act compliance with instant risk reports, PDF audits, and real-time alerts. Trusted across Europe.">
+  <meta name="keywords" content="AI Act, EU compliance, AI risk report, GDPR, DPIA, SentinelStack">
   <meta name="author" content="SentinelStack AB">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="SentinelStack – AI-säkerhet & Compliance 2025">
-  <meta property="og:description" content="Följ AI Act utan stress. SentinelStack sköter dokumentationen åt dig.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="SentinelStack – EU AI Act Compliance Automation">
+  <meta property="og:description" content="Audit your AI systems. Get compliant. Sleep better.">
   <meta property="og:image" content="https://sentinelstack.tech/og-image.jpg">
   <meta property="og:url" content="https://sentinelstack.tech">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SentinelStack – AI-säkerhet & Compliance 2025">
-  <meta name="twitter:description" content="Följ AI Act utan stress. SentinelStack sköter dokumentationen åt dig.">
+  <meta name="twitter:title" content="SentinelStack – AI Risk & Compliance">
+  <meta name="twitter:description" content="Generate instant EU AI Act audit reports with zero legal hassle.">
   <meta name="twitter:image" content="https://sentinelstack.tech/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <!-- Tailwind CSS via CDN -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts preload (om du vill använda) -->
+  <!-- Optional Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
 
-  <!-- Custom Neon / Glass styles -->
+  <!-- Custom Styles -->
   <style>
     .neon-text-green {
       color: #39FF14;
@@ -48,28 +49,28 @@
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 30px 8px rgba(34, 211, 238, 0.6);
+      }
+    }
+    .animate-glow {
+      animation: pulse-glow 6s ease-in-out infinite;
     }
   </style>
 </head>
-
-  <!-- Scroll Progress Script -->
-<script>
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    document.getElementById('scroll-progress').style.width = scrollPercent + '%';
-  });
-</script>
-
-  
 <body class="text-gray-200 bg-black font-sans antialiased">
-  <!-- Scroll Progress Bar -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 w-0 z-50"></div>
+  <!-- Page content goes here -->
+  <!-- Header, Hero, Features, Pricing, Compliance, Testimonials, CTA, etc. -->
+</body>
+</html>
 
 <!-- Header & Navigation -->
-<!-- Navbar -->
 <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-md text-white shadow-md">
   <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
     <a href="/" class="text-2xl font-extrabold neon-text-blue tracking-wide">
@@ -91,7 +92,10 @@
 
 <!-- Hero Section -->
 <section id="hero" class="relative flex items-center justify-center min-h-screen text-center px-6 bg-black overflow-hidden">
+  <!-- Background Glow -->
   <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-emerald-500 opacity-20 blur-3xl animate-glow"></div>
+  
+  <!-- Content -->
   <div class="relative z-10 max-w-3xl mx-auto">
     <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-5 leading-tight drop-shadow-lg">
       AI Compliance. Automated. Trusted.
@@ -113,49 +117,6 @@
   </div>
 </section>
 
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden focus:outline-none">
-      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-</header>
- <!-- Mobile Nav Menu (optimized) -->
-<div id="mobile-menu" class="md:hidden hidden flex flex-col items-center bg-black/90 backdrop-blur-md py-6 space-y-5 text-center shadow-lg">
-  <a href="#features" class="text-white text-lg font-medium hover:text-cyan-400 transition" onclick="toggleMenu()">Funktioner</a>
-  <a href="#pricing" class="text-white text-lg font-medium hover:text-cyan-400 transition" onclick="toggleMenu()">Priser</a>
-  <a href="#testimonials" class="text-white text-lg font-medium hover:text-cyan-400 transition" onclick="toggleMenu()">Kundberättelser</a>
-  <a href="#faq" class="text-white text-lg font-medium hover:text-cyan-400 transition" onclick="toggleMenu()">FAQ</a>
-  <button id="demo-btn-mobile" class="w-10/12 max-w-xs px-4 py-2 border border-cyan-400 text-cyan-300 rounded hover:bg-cyan-400 hover:text-black font-medium transition">
-    Se en demo
-  </button>
-  <a href="#signup" class="w-10/12 max-w-xs px-4 py-2 bg-green-400 text-black font-semibold rounded hover:bg-green-300 transition">
-    Kom igång gratis
-  </a>
-</div>
-</header>
-
-</section>
-
-<!-- Glow CSS animation -->
-<style>
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px 8px rgba(34, 211, 238, 0.6);
-  }
-}
-.animate-glow {
-  animation: pulse-glow 6s ease-in-out infinite;
-}
-</style>
-
-
-<!-- Features Section -->
 <!-- Features Section -->
 <section id="features" class="max-w-7xl mx-auto py-24 px-6 bg-black text-white">
   <h2 class="text-4xl font-extrabold text-center mb-16 tracking-tight">
@@ -203,57 +164,6 @@
   </div>
 </section>
 
-
-    <!-- Feature 2 -->
-    <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group">
-      <div class="mb-6 text-cyan-400">
-        <!-- Icon: Shield Check -->
-        <svg class="w-14 h-14 mx-auto group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 4.75L19.25 8.25V12c0 5.385-3.208 10.74-7.25 12-4.042-1.26-7.25-6.615-7.25-12V8.25L12 4.75z" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9.75 11.75L11.25 13.25L14.25 10.25" />
-        </svg>
-      </div>
-      <h3 class="text-2xl font-semibold text-center text-white mb-3">Säkerhetsövervakning i realtid</h3>
-      <p class="text-gray-300 text-center text-base leading-relaxed">Identifiera risker och avvikelser i realtid med intelligent bevakning och automatiska varningar.</p>
-    </div>
-
-    <!-- Feature 3 -->
-    <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group">
-      <div class="mb-6 text-cyan-400">
-        <!-- Icon: Document Chart Bar -->
-        <svg class="w-14 h-14 mx-auto group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 5.75V8.25" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M8.75 12.75V14.25" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15.25 10.75V14.25" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6 3.75H18C18.4142 3.75 18.75 4.08579 18.75 4.5V19.5C18.75 19.9142 18.4142 20.25 18 20.25H6C5.58579 20.25 5.25 19.9142 5.25 19.5V4.5C5.25 4.08579 5.58579 3.75 6 3.75Z" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9.75 17.25H14.25" />
-        </svg>
-      </div>
-      <h3 class="text-2xl font-semibold text-center text-white mb-3">Rapporter & Insikter</h3>
-      <p class="text-gray-300 text-center text-base leading-relaxed">Få skräddarsydda rapporter om er AI-status. Underlätta revisioner, visa upp compliance – snabbt och tydligt.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Lead Magnet Section: AI Act Checklist -->
-<section id="lead-magnet" class="relative py-16 px-6 bg-fixed bg-cover bg-center" style="background-image: url('<!-- Optional background image URL -->');">
-  <!-- optional semi-transparent overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div class="relative max-w-4xl mx-auto glass-bg rounded-lg p-8 text-center">
-    <h2 class="text-2xl font-bold mb-4">Gratis PDF: AI Act Checklist 2025</h2>
-    <p class="mb-6 text-gray-100">Förbered er inför kommande AI-regleringar. Checklistan sammanfattar viktiga delar av AI Act och kan hjälpa er identifiera var ert system står idag.</p>
-    <a href="/pdfs/ai-act-checklist-2025.pdf" class="inline-flex items-center px-5 py-3 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">
-      <!-- Download icon -->
-      <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 3v13m0 0l-3.5-3.5M12 16l3.5-3.5M5 19h14" />
-      </svg>
-      Ladda ner checklistan
-    </a>
-    <p class="mt-4 text-xs text-gray-400">Observera: Checklistan ersätter inte juridisk rådgivning. För full AI Act-anpassning rekommenderas expertgranskning.</p>
-  </div>
-</section>
-<!-- Pricing Section -->
 <!-- Pricing Section -->
 <section id="pricing" class="max-w-6xl mx-auto py-24 px-6 text-white">
   <h2 class="text-4xl font-bold text-center mb-16">Simple, Transparent Pricing</h2>
@@ -301,45 +211,56 @@
   </div>
 </section>
 
-<!-- Lead Capture Form Section -->
-<section id="lead-capture" class="max-w-2xl mx-auto py-12 px-6">
-  <form action="https://hooks.zapier.com/hooks/catch/23318877/uok1k2v/" method="POST" class="flex flex-col sm:flex-row items-center gap-4 bg-gray-900 p-6 rounded-lg shadow-md border border-cyan-500">
-    <input
-      type="email"
-      name="email"
-      required
-      placeholder="Din e‑postadress"
-      class="w-full sm:w-2/3 px-4 py-2 bg-gray-800 text-white border border-cyan-400 rounded focus:outline-none focus:ring-2 focus:ring-cyan-300"
-    />
-    <button
-      type="submit"
-      class="w-full sm:w-auto px-5 py-2 bg-cyan-400 text-black font-semibold rounded hover:bg-cyan-300 transition"
-    >
-      Ladda ner AI Act‑checklistan
-    </button>
-  </form>
+<!-- Compliance Section -->
+<section id="compliance" class="max-w-5xl mx-auto py-24 px-6 text-white">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Built for the EU AI Act</h2>
+  <p class="text-lg text-center text-gray-300 mb-12">
+    SentinelStack helps AI startups and tech teams meet their obligations under the EU Artificial Intelligence Act — without drowning in bureaucracy.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-10 text-center">
+    
+    <!-- Risk Classification -->
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">Risk Classification</h3>
+      <p class="text-sm text-gray-400">We automatically assess whether your AI system falls under the 'High-Risk' category — and guide you accordingly.</p>
+    </div>
+
+    <!-- DPIA & Documentation -->
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">DPIA & Documentation</h3>
+      <p class="text-sm text-gray-400">For qualifying use cases, we help generate Data Protection Impact Assessments and log all processing activities.</p>
+    </div>
+
+    <!-- No Legal Team Needed -->
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">No Legal Team Needed</h3>
+      <p class="text-sm text-gray-400">You don’t need to hire a DPO on day one. We give you the tools to comply from the prototype phase and scale as needed.</p>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="#signup" class="inline-block px-6 py-3 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">
+      Get Compliant in Minutes
+    </a>
+  </div>
 </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="max-w-6xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-4xl font-bold text-center mb-16">What Our Users Say</h2>
-  <div class="grid md:grid-cols-3 gap-10">
-
-    <div class="bg-gray-900 rounded-2xl p-6 shadow-lg">
-      <p class="text-lg italic text-gray-300 mb-4">“SentinelStack gave us peace of mind within hours — and helped us avoid a major compliance failure.”</p>
-      <div class="text-sm font-semibold text-gray-500">– CTO, MedTech Startup</div>
-    </div>
-
-    <div class="bg-gray-900 rounded-2xl p-6 shadow-lg">
-      <p class="text-lg italic text-gray-300 mb-4">“Finally a tool that doesn't just warn — it actually fixes the problems. We sleep better now.”</p>
-      <div class="text-sm font-semibold text-gray-500">– Security Lead, AI SaaS</div>
-    </div>
-
-    <div class="bg-gray-900 rounded-2xl p-6 shadow-lg">
-      <p class="text-lg italic text-gray-300 mb-4">“Without SentinelStack, we would have failed our EU AI Act audit. It’s a game changer.”</p>
-      <div class="text-sm font-semibold text-gray-500">– Legal Advisor, Compliance Partner</div>
-    </div>
-
+<!-- Lead Magnet Section: AI Act Checklist -->
+<section id="lead-magnet" class="relative py-16 px-6 bg-fixed bg-cover bg-center" style="background-image: url('');">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative max-w-4xl mx-auto glass-bg rounded-lg p-8 text-center">
+    <h2 class="text-2xl font-bold mb-4">Free PDF: AI Act Compliance Checklist</h2>
+    <p class="mb-6 text-gray-100">Be ready for upcoming AI regulations. This checklist summarizes key AI Act sections and helps you evaluate your current compliance level.</p>
+    <a href="/pdfs/ai-act-checklist-2025.pdf" class="inline-flex items-center px-5 py-3 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">
+      <!-- Download icon -->
+      <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 3v13m0 0l-3.5-3.5M12 16l3.5-3.5M5 19h14" />
+      </svg>
+      Download the Checklist
+    </a>
+    <p class="mt-4 text-xs text-gray-400">Note: This checklist is not legal advice. For full compliance, seek expert review.</p>
   </div>
 </section>
 
@@ -355,37 +276,35 @@
   </div>
 </section>
 
-
-<!-- FAQ Section -->
-<!-- Compliance Section -->
-<section id="compliance" class="max-w-5xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Built for the EU AI Act</h2>
-  <p class="text-lg text-center text-gray-300 mb-12">
-    SentinelStack helps AI startups and tech teams meet their obligations under the EU Artificial Intelligence Act — without drowning in bureaucracy.
-  </p>
-
-  <div class="grid md:grid-cols-3 gap-10 text-center">
-    
-    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">Risk Classification</h3>
-      <p class="text-sm text-gray-400">We automatically assess whether your AI system falls under the 'High-Risk' category — and guide you accordingly.</p>
-    </div>
-
-    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">DPIA & Documentation</h3>
-      <p class="text-sm text-gray-400">For qualifying use cases, we help generate Data Protection Impact Assessments and log all processing activities.</p>
-    </div>
-
-    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">No Legal Team Needed</h3>
-      <p class="text-sm text-gray-400">You don’t need to hire a DPO on day one. We give you the tools to comply from the prototype phase and scale as needed.</p>
-    </div>
-
-  </div>
-
-  <div class="text-center mt-12">
-    <a href="#signup" class="inline-block px-6 py-3 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">
-      Get Compliant in Minutes
-    </a>
-  </div>
+<!-- Lead Capture Form Section -->
+<section id="lead-capture" class="max-w-2xl mx-auto py-12 px-6">
+  <form action="https://hooks.zapier.com/hooks/catch/23318877/uok1k2v/" method="POST" class="flex flex-col sm:flex-row items-center gap-4 bg-gray-900 p-6 rounded-lg shadow-md border border-cyan-500">
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="Your email address"
+      class="w-full sm:w-2/3 px-4 py-2 bg-gray-800 text-white border border-cyan-400 rounded focus:outline-none focus:ring-2 focus:ring-cyan-300"
+    />
+    <button
+      type="submit"
+      class="w-full sm:w-auto px-5 py-2 bg-cyan-400 text-black font-semibold rounded hover:bg-cyan-300 transition"
+    >
+      Get the Free PDF
+    </button>
+  </form>
 </section>
+
+<!-- Footer Section -->
+<footer class="bg-black text-gray-400 py-10 px-6 mt-10 border-t border-gray-800">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+    <div>
+      &copy; 2025 SentinelStack AB. All rights reserved.
+    </div>
+    <div class="flex space-x-6">
+      <a href="/pdfs/ai-act-checklist-2025.pdf" class="hover:text-white transition">Download Checklist</a>
+      <a href="mailto:ceo@sentinelstack.tech" class="hover:text-white transition">Contact</a>
+      <a href="https://sentinelstack.tech" class="hover:text-white transition">Homepage</a>
+    </div>
+  </div>
+</footer>
