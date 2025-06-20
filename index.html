@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
@@ -70,31 +69,50 @@
   <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 w-0 z-50"></div>
 
 <!-- Header & Navigation -->
+<!-- Navbar -->
 <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-md text-white shadow-md">
   <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-    
-    <!-- Logo -->
     <a href="/" class="text-2xl font-extrabold neon-text-blue tracking-wide">
       SentinelStack
     </a>
-    
-    <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-      <a href="#features" class="hover:text-cyan-400 transition-all duration-200">Funktioner</a>
-      <a href="#pricing" class="hover:text-cyan-400 transition-all duration-200">Priser</a>
-      <a href="#testimonials" class="hover:text-cyan-400 transition-all duration-200">Kundberättelser</a>
-      <a href="#faq" class="hover:text-cyan-400 transition-all duration-200">FAQ</a>
+      <a href="#features" class="hover:text-cyan-400 transition-all duration-200">Features</a>
+      <a href="#pricing" class="hover:text-cyan-400 transition-all duration-200">Pricing</a>
+      <a href="#compliance" class="hover:text-cyan-400 transition-all duration-200">AI Act</a>
+      <a href="#contact" class="hover:text-cyan-400 transition-all duration-200">Contact</a>
     </nav>
-    
-    <!-- CTA Buttons -->
     <div class="hidden md:flex items-center space-x-4">
-      <button id="demo-btn" class="px-4 py-2 border border-cyan-400 text-cyan-300 rounded hover:bg-cyan-400 hover:text-black transition font-medium">
-        Se en demo
-      </button>
       <a href="#signup" class="px-4 py-2 bg-green-400 text-black font-semibold rounded shadow hover:bg-green-300 transition">
-        Kom igång gratis
+        Get Started Free
       </a>
     </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="relative flex items-center justify-center min-h-screen text-center px-6 bg-black overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-emerald-500 opacity-20 blur-3xl animate-glow"></div>
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-5 leading-tight drop-shadow-lg">
+      AI Compliance. Automated. Trusted.
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 mb-6">
+      Align your AI systems with the EU AI Act — without the legal overhead. SentinelStack generates risk reports, documentation and alerts automatically.
+    </p>
+    <div class="text-sm text-gray-400 italic mb-8">
+      Trusted by startups, engineers and compliance teams across Europe.
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#signup" class="px-6 py-3 bg-green-500 text-black text-lg font-semibold rounded-md shadow hover:bg-green-400 transition">
+        Try it Free
+      </a>
+      <a href="#demo" class="px-6 py-3 border border-cyan-400 text-cyan-300 text-lg font-medium rounded-md hover:bg-cyan-400 hover:text-black transition">
+        See a Live Demo
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Mobile Menu Button -->
     <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -187,29 +205,53 @@
 
 
 <!-- Features Section -->
-<section id="features" class="max-w-7xl mx-auto py-20 px-6 bg-black">
-  <h2 class="text-4xl font-extrabold text-center text-white mb-16 tracking-tight">Nyckelfunktioner</h2>
+<!-- Features Section -->
+<section id="features" class="max-w-7xl mx-auto py-24 px-6 bg-black text-white">
+  <h2 class="text-4xl font-extrabold text-center mb-16 tracking-tight">
+    Everything You Need for AI Act Compliance. Built In.
+  </h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
     
     <!-- Feature 1 -->
-    <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group">
+    <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group text-center">
       <div class="mb-6 text-cyan-400">
-        <!-- Icon: Cog -->
         <svg class="w-14 h-14 mx-auto group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 4.75V6.25" />
           <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L16.5 8.25" />
           <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M19.25 12H17.75" />
           <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M17.25 17.25L16.5 15.75" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 19.25V17.75" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6.75 17.25L7.5 15.75" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.75 12H6.25" />
-          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75L7.5 8.25" />
           <circle cx="12" cy="12" r="3.25" stroke="currentColor" stroke-width="1.5" />
         </svg>
       </div>
-      <h3 class="text-2xl font-semibold text-center text-white mb-3">Automatisk regelefterlevnad</h3>
-      <p class="text-gray-300 text-center text-base leading-relaxed">Skanna och övervaka era AI-modeller mot gällande regelverk (AI Act m.fl.) dygnet runt – helt automatiserat.</p>
+      <h3 class="text-2xl font-semibold mb-3">Automated Compliance Checks</h3>
+      <p class="text-gray-300 text-base leading-relaxed">We scan your AI systems for risk, bias and documentation gaps — and generate audit-ready PDFs with a single click.</p>
     </div>
+
+    <!-- Feature 2 -->
+    <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group text-center">
+      <div class="mb-6 text-green-400">
+        <svg class="w-14 h-14 mx-auto group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-semibold mb-3">Real-Time Risk Alerts</h3>
+      <p class="text-gray-300 text-base leading-relaxed">Detect high-risk processing, model drift or missing controls in real time — and take immediate action.</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group text-center">
+      <div class="mb-6 text-purple-400">
+        <svg class="w-14 h-14 mx-auto group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405M19 13v-2a8 8 0 10-16 0v2m4 4h8" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-semibold mb-3">Exportable Audit Reports</h3>
+      <p class="text-gray-300 text-base leading-relaxed">Send PDF reports to investors, customers or regulators in under 5 minutes. No lawyers required.</p>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Feature 2 -->
     <div class="bg-gray-900 bg-opacity-60 p-8 rounded-2xl hover:shadow-xl transition duration-300 group">
@@ -261,38 +303,48 @@
   </div>
 </section>
 <!-- Pricing Section -->
-<section id="features" class="max-w-6xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-4xl font-bold text-center mb-16">Allt du behöver för AI Act–compliance. Inbyggt.</h2>
+<!-- Pricing Section -->
+<section id="pricing" class="max-w-6xl mx-auto py-24 px-6 text-white">
+  <h2 class="text-4xl font-bold text-center mb-16">Simple, Transparent Pricing</h2>
   <div class="grid md:grid-cols-3 gap-10">
 
-    <div class="bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg text-center">
-      <div class="mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 0a8 8 0 11-16 0 8 8 0 0116 0z" />
-        </svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Automatiska Riskanalyser</h3>
-      <p class="text-gray-400 text-sm">Identifiera, kategorisera och rapportera AI-risker enligt EU-standard med ett klick.</p>
+    <!-- Starter -->
+    <div class="border border-gray-700 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg">
+      <h3 class="text-2xl font-semibold mb-2 text-center">Starter</h3>
+      <p class="text-4xl font-bold text-green-400 text-center mb-4">€99</p>
+      <p class="text-sm text-gray-400 text-center mb-6">One-time report to assess AI Act readiness.</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-8">
+        <li>✓ Risk classification</li>
+        <li>✓ AI Act checklist score</li>
+        <li>✓ PDF report within 10 minutes</li>
+      </ul>
+      <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00" class="mt-auto text-center bg-green-500 text-black font-semibold py-3 rounded-lg hover:bg-green-400 transition">Get Starter</a>
     </div>
 
-    <div class="bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg text-center">
-      <div class="mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Policygenerator i realtid</h3>
-      <p class="text-gray-400 text-sm">Skapa och exportera AI-policys automatiskt baserat på projektets användning och risknivå.</p>
+    <!-- Growth -->
+    <div class="border border-cyan-500 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg scale-105 shadow-cyan-500/40">
+      <h3 class="text-2xl font-semibold mb-2 text-center">Growth</h3>
+      <p class="text-4xl font-bold text-cyan-300 text-center mb-4">€249</p>
+      <p class="text-sm text-gray-400 text-center mb-6">Ideal for teams preparing for audits or investor due diligence.</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-8">
+        <li>✓ Everything in Starter</li>
+        <li>✓ Tailored recommendations</li>
+        <li>✓ Risk mitigation plan (PDF)</li>
+      </ul>
+      <a href="https://buy.stripe.com/4gM8wP9c9ciO3qd8mu93y01" class="mt-auto text-center bg-cyan-400 text-black font-semibold py-3 rounded-lg hover:bg-cyan-300 transition">Choose Growth</a>
     </div>
 
-    <div class="bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg text-center">
-      <div class="mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M19 13v-2a8 8 0 10-16 0v2m4 4h8" />
-        </svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Realtidsbevakning & Larm</h3>
-      <p class="text-gray-400 text-sm">Upptäck automatiskt compliance-brott, bias eller högrisk-beteenden i AI-system.</p>
+    <!-- Premium -->
+    <div class="border border-gray-700 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg">
+      <h3 class="text-2xl font-semibold mb-2 text-center">Premium</h3>
+      <p class="text-4xl font-bold text-purple-300 text-center mb-4">€499</p>
+      <p class="text-sm text-gray-400 text-center mb-6">For high-risk AI or regulated industries needing expert review.</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-8">
+        <li>✓ Everything in Growth</li>
+        <li>✓ 1:1 Expert session (30 min)</li>
+        <li>✓ Annual compliance support</li>
+      </ul>
+      <a href="https://buy.stripe.com/8x29AT4VTdmS9OBbyG93y02" class="mt-auto text-center bg-purple-400 text-black font-semibold py-3 rounded-lg hover:bg-purple-300 transition">Upgrade to Premium</a>
     </div>
 
   </div>
@@ -317,119 +369,72 @@
   </form>
 </section>
 
+<!-- Testimonials Section -->
 <section id="testimonials" class="max-w-6xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-4xl font-bold text-center mb-16">Vad andra säger</h2>
+  <h2 class="text-4xl font-bold text-center mb-16">What Our Users Say</h2>
   <div class="grid md:grid-cols-3 gap-10">
 
     <div class="bg-gray-900 rounded-2xl p-6 shadow-lg">
-      <p class="text-lg italic text-gray-300 mb-4">“SentinelStack gav oss full kontroll på mindre än en dag – och hjälpte oss undvika stora compliance-risken.”</p>
-      <div class="text-sm font-semibold text-gray-500">– CTO, MedTech-bolag</div>
+      <p class="text-lg italic text-gray-300 mb-4">“SentinelStack gave us peace of mind within hours — and helped us avoid a major compliance failure.”</p>
+      <div class="text-sm font-semibold text-gray-500">– CTO, MedTech Startup</div>
     </div>
 
     <div class="bg-gray-900 rounded-2xl p-6 shadow-lg">
-      <p class="text-lg italic text-gray-300 mb-4">“Äntligen ett verktyg som inte bara varnar, utan faktiskt löser problemet. Vi sover bättre nu.”</p>
-      <div class="text-sm font-semibold text-gray-500">– Säkerhetschef, AI-startup</div>
+      <p class="text-lg italic text-gray-300 mb-4">“Finally a tool that doesn't just warn — it actually fixes the problems. We sleep better now.”</p>
+      <div class="text-sm font-semibold text-gray-500">– Security Lead, AI SaaS</div>
     </div>
 
     <div class="bg-gray-900 rounded-2xl p-6 shadow-lg">
-      <p class="text-lg italic text-gray-300 mb-4">“Utan SentinelStack hade vi aldrig klarat AI Act–revisionen. En game changer.”</p>
-      <div class="text-sm font-semibold text-gray-500">– Juridisk rådgivare, EU-konsult</div>
+      <p class="text-lg italic text-gray-300 mb-4">“Without SentinelStack, we would have failed our EU AI Act audit. It’s a game changer.”</p>
+      <div class="text-sm font-semibold text-gray-500">– Legal Advisor, Compliance Partner</div>
     </div>
 
   </div>
 </section>
 
-<section id="pricing" class="max-w-6xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-4xl font-bold text-center mb-16">Våra Paket</h2>
-  <div class="grid md:grid-cols-3 gap-10">
-
-    <!-- Gratisplan -->
-    <div class="border border-gray-700 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg">
-      <h3 class="text-2xl font-semibold mb-2 text-center">Gratis</h3>
-      <p class="text-4xl font-bold text-green-400 text-center mb-4">0 kr</p>
-      <p class="text-sm text-gray-400 text-center mb-6">Perfekt för att komma igång med AI compliance.</p>
-      <ul class="text-sm text-gray-300 space-y-2 mb-8">
-        <li>✓ Upp till 3 AI-projekt</li>
-        <li>✓ Grundläggande compliance-kontroller</li>
-        <li>✓ E-postsupport</li>
-      </ul>
-      <a href="#signup" class="mt-auto text-center bg-green-500 text-black font-semibold py-3 rounded-lg hover:bg-green-400 transition">Välj Gratis</a>
-    </div>
-
-    <!-- Proplan -->
-    <div class="border border-cyan-500 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-cyan-500/50 shadow-lg scale-105">
-      <h3 class="text-2xl font-semibold mb-2 text-center">Pro</h3>
-      <p class="text-4xl font-bold text-cyan-300 text-center mb-4">799 kr/mån</p>
-      <p class="text-sm text-gray-400 text-center mb-6">För startups & team som vill växa med full koll.</p>
-      <ul class="text-sm text-gray-300 space-y-2 mb-8">
-        <li>✓ Upp till 10 AI-projekt</li>
-        <li>✓ Avancerade compliance-kontroller</li>
-        <li>✓ Realtids-övervakning & larm</li>
-        <li>✓ Prioriterad support</li>
-      </ul>
-      <a href="#signup" class="mt-auto text-center bg-cyan-400 text-black font-semibold py-3 rounded-lg hover:bg-cyan-300 transition">Välj Pro</a>
-    </div>
-
-    <!-- Enterpriseplan -->
-    <div class="border border-gray-700 rounded-2xl p-8 flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 shadow-lg">
-      <h3 class="text-2xl font-semibold mb-2 text-center">Enterprise</h3>
-      <p class="text-4xl font-bold text-purple-300 text-center mb-4">Kontakta oss</p>
-      <p class="text-sm text-gray-400 text-center mb-6">För stora organisationer med höga krav.</p>
-      <ul class="text-sm text-gray-300 space-y-2 mb-8">
-        <li>✓ Obegränsat antal projekt</li>
-        <li>✓ Anpassade policys & integrationer</li>
-        <li>✓ Dedikerad CSM & onboarding</li>
-        <li>✓ 24/7 premiumsupport</li>
-      </ul>
-      <a href="#contact" class="mt-auto text-center bg-purple-400 text-black font-semibold py-3 rounded-lg hover:bg-purple-300 transition">Kontakta sälj</a>
-    </div>
+<!-- Final CTA Section -->
+<section id="signup" class="bg-gradient-to-r from-cyan-500 to-emerald-500 text-black py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to secure your AI compliance?</h2>
+    <p class="text-lg mb-8">Get instant access to SentinelStack's automated reports, risk scoring, and audit-ready PDF documentation.</p>
+    <a href="https://buy.stripe.com/5kQ14ncol2IegcZ7iq93y00" class="inline-block px-8 py-4 bg-black text-white text-lg font-semibold rounded hover:bg-gray-800 transition">
+      Start for €99
+    </a>
+    <p class="text-sm mt-4 text-gray-800">No subscription. No surprises. Full report in 10 minutes.</p>
   </div>
 </section>
-
-
 
 
 <!-- FAQ Section -->
-<section id="faq" class="max-w-4xl mx-auto py-20 px-6">
-  <h2 class="text-3xl font-bold text-center mb-8">Vanliga frågor</h2>
+<!-- Compliance Section -->
+<section id="compliance" class="max-w-5xl mx-auto py-24 px-6 text-white">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Built for the EU AI Act</h2>
+  <p class="text-lg text-center text-gray-300 mb-12">
+    SentinelStack helps AI startups and tech teams meet their obligations under the EU Artificial Intelligence Act — without drowning in bureaucracy.
+  </p>
 
-  <!-- Question 1 -->
-  <details class="mb-4 bg-gray-800 bg-opacity-50 p-4 rounded">
-    <summary class="cursor-pointer font-semibold text-lg text-cyan-400">
-      Vad är AI Act och hur relaterar det till SentinelStack?
-    </summary>
-    <div class="mt-2 text-gray-300 text-sm">
-      AI Act är en kommande EU-lagstiftning som reglerar användning av AI-system. SentinelStack hjälper er att förstå, övervaka och dokumentera hur era AI-lösningar förhåller sig till dessa regler – med fokus på transparens, riskhantering och förenklad rapportering.
+  <div class="grid md:grid-cols-3 gap-10 text-center">
+    
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">Risk Classification</h3>
+      <p class="text-sm text-gray-400">We automatically assess whether your AI system falls under the 'High-Risk' category — and guide you accordingly.</p>
     </div>
-  </details>
 
-  <!-- Question 2 -->
-  <details class="mb-4 bg-gray-800 bg-opacity-50 p-4 rounded">
-    <summary class="cursor-pointer font-semibold text-lg text-cyan-400">
-      Hur hanterar ni säkerhet och dataskydd?
-    </summary>
-    <div class="mt-2 text-gray-300 text-sm">
-      All känslig information krypteras och vi tillämpar strikt rollbaserad åtkomstkontroll. SentinelStack driftas på säkerhetsgranskade molnplattformar och kan varna för misstänkt beteende i AI-modeller i realtid.
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">DPIA & Documentation</h3>
+      <p class="text-sm text-gray-400">For qualifying use cases, we help generate Data Protection Impact Assessments and log all processing activities.</p>
     </div>
-  </details>
 
-  <!-- Question 3 -->
-  <details class="mb-4 bg-gray-800 bg-opacity-50 p-4 rounded">
-    <summary class="cursor-pointer font-semibold text-lg text-cyan-400">
-      Kan man testa SentinelStack utan kostnad?
-    </summary>
-    <div class="mt-2 text-gray-300 text-sm">
-      Ja – vi erbjuder ett kostnadsfritt testpaket utan krav på kreditkort. Perfekt för att prova systemet i praktiken och se om det passar era behov.
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">No Legal Team Needed</h3>
+      <p class="text-sm text-gray-400">You don’t need to hire a DPO on day one. We give you the tools to comply from the prototype phase and scale as needed.</p>
     </div>
-  </details>
 
-  <!-- Question 4 -->
-  <details class="mb-4 bg-gray-800 bg-opacity-50 p-4 rounded">
-    <summary class="cursor-pointer font-semibold text-lg text-cyan-400">
-      Fungerar SentinelStack med våra befintliga verktyg?
-    </summary>
-    <div class="mt-2 text-gray-300 text-sm">
-      Ja. Vår lösning har ett öppet API och stödjer integrationer med CI/CD-flöden, molnplattformar och verktyg som Slack, GitHub och Jira. Ni kan enkelt anpassa integrationen till ert nuvarande ekosystem.
-    </div>
-  </details>
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="#signup" class="inline-block px-6 py-3 bg-green-500 text-black font-semibold rounded hover:bg-green-400 transition">
+      Get Compliant in Minutes
+    </a>
+  </div>
 </section>
