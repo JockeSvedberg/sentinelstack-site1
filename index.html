@@ -321,7 +321,7 @@
     const msg = document.getElementById("responseMsg");
     msg.textContent = "Sending...";
     try {
-      const res = await fetch("https://hooks.zapier.com/hooks/catch/23318877/uolhdlm/", {
+const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
