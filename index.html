@@ -295,18 +295,52 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="max-w-3xl mx-auto py-24 px-6 text-white">
-  <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
-  <form action="https://hooks.zapier.com/hooks/catch/23318877/uoliwd5/" method="POST" class="flex flex-col space-y-4 bg-gray-900 p-6 rounded-xl shadow-md">
-    <input type="text" name="name" placeholder="Your name" required class="p-3 rounded bg-gray-800 border border-cyan-500 text-white">
-    <input type="email" name="email" placeholder="Your email address" required class="p-3 rounded bg-gray-800 border border-cyan-500 text-white">
-    <textarea name="message" placeholder="Your message" rows="5" required class="p-3 rounded bg-gray-800 border border-cyan-500 text-white"></textarea>
-    <button type="submit" class="bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded transition">
-      Send Message
-    </button>
-  </form>
-</section>
+  <!-- Kontaktsektion – börjar här -->
+  <section id="contact" class="py-20 px-4 bg-black text-white">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded" />
+        <textarea name="message" placeholder="Your Message" required class="w-full px-4 py-2 bg-gray-900 text-white border border-gray-700 rounded h-32"></textarea>
+        <button type="submit" class="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-300 transition">Send</button>
+        <p id="responseMsg" class="text-sm mt-2"></p>
+      </form>
+    </div>
+  </section>
 
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+    const msg = document.getElementById("responseMsg");
+    msg.textContent = "Sending...";
+    try {
+      const res = await fetch("https://hooks.zapier.com/hooks/catch/23318877/uoliwd5/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        msg.textContent = "Message sent successfully ✅";
+        form.reset();
+      } else {
+        msg.textContent = "Something went wrong ❌";
+      }
+    } catch (err) {
+      msg.textContent = "Connection error ❌";
+    }
+  });
+  </script>
+  <!-- Kontaktsektion – slutar här -->
+
+</body>
+</html>
 
 <!-- Footer Section -->
 <footer class="bg-black text-gray-400 py-10 px-6 mt-10 border-t border-gray-800">
